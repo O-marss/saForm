@@ -1,0 +1,693 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <section>
+        <div class="container py-5">
+          <div class="row">
+            <div class="col-12">
+              <div id="form-container">
+                <form class="row needs-validation" novalidate id="form" onsubmit="sendEmail(); reset(); return false">
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationCompanyname" class="form-label"
+                        >Company Name: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCompanyname"
+                        placeholder="A full name is required"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter The Company Name
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationRegistrationNumber" class="form-label"
+                        >Registration number: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationRegistrationNumber"
+                        placeholder="Registration Number"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        Please Enter Registration Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationDateOfIncorporation" class="form-label"
+                        >Date of incorporation: <span>*</span></label
+                      >
+                      <input
+                        type="date"
+                        class="form-control"
+                        id="validationDateOfIncorporation"
+                        placeholder="Date of Incorporation"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        Please Enter Date of incorporation
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationCompanyType" class="form-label"
+                        >Company type: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCompanyType"
+                        placeholder="Company Type"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter The Company type
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationCorrespondenceMail" class="form-label"
+                        >Correspondence mail: <span>*</span></label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="validationCorrespondenceMail"
+                        placeholder="name@example.com"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        Please Enter Correspondence mail
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationTaxNumber" class="form-label"
+                        >Tax number: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationTaxNumber"
+                        placeholder="Tax Number"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        Please Enter Tax Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationGeneralManager" class="form-label"
+                        >general manager: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationGeneralManager"
+                        placeholder="A full name is required"
+                        required
+                      />
+
+                      <div class="invalid-feedback">
+                        Please Enter General Manager Name
+                      </div>
+
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationGeneralEmail" class="form-label"
+                        >Email: <span>*</span></label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="validationGeneralEmail"
+                        placeholder="name@example.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter a Valid Email
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationGeneralMobile" class="form-label"
+                        >Mobile number: <span>*</span></label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="validationGeneralMobile"
+                        placeholder="0500000000"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter a Valid Mobile Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationProcurementDirectorName" class="form-label"
+                        >Procurement Director: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationProcurementDirectorName"
+                        placeholder="A full name is required"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter Procurement Director Name
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationProcurementDirectorEmail" class="form-label"
+                        >Email: <span>*</span></label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="validationProcurementDirectorEmail"
+                        placeholder="name@example.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter a Valid Email
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationProcurementDirectorMobile" class="form-label"
+                        >Mobile number: <span>*</span></label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="validationProcurementDirectorMobile"
+                        placeholder="0500000000"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter a Valid Mobile Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationFinanceManagerName" class="form-label"
+                        >finance manager: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationFinanceManagerName"
+                        placeholder="A full name is required"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter Finance Manager Name
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationFinanceManagerEmail" class="form-label"
+                        >Email: <span>*</span></label
+                      >
+                      <input
+                        type="email"
+                        class="form-control"
+                        id="validationFinanceManagerEmail"
+                        placeholder="name@example.com"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter a Valid Email
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationFinanceManagerMobile" class="form-label"
+                        >Mobile number: <span>*</span></label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="validationFinanceManagerMobile"
+                        placeholder="0500000000"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter a Valid Mobile Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationOwnerName" class="form-label"
+                        >Owner: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationOwnerName"
+                        placeholder="A full name is required"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter Owner Name
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationOwnerID" class="form-label"
+                        >ID number: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationOwnerID"
+                        placeholder="ID Number"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter The Owner ID Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-4">
+                    <div class="mb-3">
+                      <label for="validationOwnerMobile" class="form-label"
+                        >Mobile number: <span>*</span></label
+                      >
+                      <input
+                        type="tel"
+                        class="form-control"
+                        id="validationOwnerMobile"
+                        placeholder="0500000000"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter a Valid Mobile Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="mt-3">
+                      <h2 class="h4 text-decoration-underline mb-3">
+                        Dear Sirs, Exal International Trading Company
+                      </h2>
+                      <p class="mb-4">
+                        We would like to inform you that we are interested in
+                        working with you on a credit basis and kindly request
+                        your approval to open a current account in our name with
+                        a credit limit of
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="validationCreditLimitNumber" class="form-label"
+                        >Credit limit: <span>*</span></label
+                      >
+                      <input
+                        type="number"
+                        class="form-control"
+                        id="validationCreditLimitNumber"
+                        placeholder="Credit Limit"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter Credit limit Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="validationCreditLimitWriting" class="form-label"
+                        >Credit limit in writing: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationCreditLimitWriting"
+                        placeholder="Credit Limit in Writing"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter a Valid Credit limit in Writing
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="mt-3">
+                      <p class="mb-4">
+                        We commit to paying the amounts due during the specified
+                        credit period, starting from the date we receive the
+                        goods. We will also promptly pay any amounts that exceed
+                        the credit limit or allowed time. If we fail to meet
+                        these payment terms or if our operations are suspended
+                        for any reason, you have the right to demand immediate
+                        settlement of all amounts owed, supported by our
+                        personal guarantee in addition to the company's
+                        guarantee. Our signature, or that of any of our
+                        employees listed or not listed below, on purchase
+                        orders, invoices, or account statements will confirm our
+                        commitment to payment. We authorize the following
+                        individuals to finalize orders, sign purchase orders,
+                        place orders by phone or email, verify account
+                        statements, and receive goods delivered by you.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="validationFirstAuthorizedName" class="form-label"
+                        >The first authorized: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationFirstAuthorizedName"
+                        placeholder="Name"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter The Authorized Name
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="validationFirstAuthorizedId" class="form-label"
+                        >iD number: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationFirstAuthorizedId"
+                        placeholder="ID Number"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter The Authorized ID Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="validationSecondAuthorizedName" class="form-label"
+                        >The second authorized: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationSecondAuthorizedName"
+                        placeholder="Name"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter The Authorized Name
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-md-6">
+                    <div class="mb-3">
+                      <label for="validationSecondAuthorizedId" class="form-label"
+                        >iD number: <span>*</span></label
+                      >
+                      <input
+                        type="text"
+                        class="form-control"
+                        id="validationSecondAuthorizedId"
+                        placeholder="ID Number"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter The Authorized ID Number
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <div class="mt-3">
+                      <p class="mb-4">
+                        In case of canceling the authorization of any signatory,
+                        we will notify you in writing and provide the name of
+                        their replacement. We are fully responsible for any
+                        consequences resulting from our failure to inform you.
+                        The account holder must pay all invoices bearing the
+                        company seal or signed by an employee, which confirm the
+                        account holder's receipt of the goods and acceptance of
+                        the stated price and quantities, regardless of who
+                        received the goods.
+                      </p>
+                    </div>
+                  </div>
+
+                  <div class="col-12">
+                    <article class="mt-3">
+                      <h2 class="h4 text-decoration-underline mb-3">
+                        Terms of the Agreement
+                      </h2>
+                      <div class="terms">
+                        <div class="article-items">
+                          <h3 class="h5">Article One:</h3>
+                          <ul>
+                            In this agreement, unless the context requires
+                            otherwise, the following terms shall have the
+                            meanings stated next to each of them:
+                            <li>
+                              "The Company" refers to Exal International Trading
+                              Company.
+                            </li>
+                            <li>
+                              "The Account" refers to the subject of the order
+                              in this agreement. "The Account Holder" means the
+                              client. "The Authorized Person" refers to the
+                              individual or individuals designated by the
+                              account holder to act on their behalf. "The Credit
+                              Limit" is the amount the account holder is allowed
+                              to owe the company at any time. "The Credit
+                              Period" refers to the duration within which the
+                              account holder must repay the full value of their
+                              monthly withdrawals.
+                            </li>
+                          </ul>
+                        </div>
+
+                        <div class="article-items">
+                          <h3 class="h5">Article Two:</h3>
+                          <p>
+                            The company shall send a monthly account statement
+                            to the account holder either in paper form or via
+                            the email address provided for correspondence in the
+                            agreement. The account holder must review the
+                            statement and notify the company of any objections
+                            within one week from the date of sending the
+                            statement. Otherwise, the statement will be
+                            considered correct and valid. The account holder
+                            undertakes to pay the full amount of the account
+                            statement within 15 days from the date the monthly
+                            statement is sent, without any delay.
+                          </p>
+                        </div>
+
+                        <div class="article-items">
+                          <h3 class="h5">Article Three:</h3>
+                          <p>
+                            The company has the right, at any time and without
+                            providing reasons, to suspend the execution of this
+                            agreement. The account holder must pay all
+                            outstanding amounts within 7 days from the date of
+                            being notified via the designated email for
+                            correspondence.
+                          </p>
+                        </div>
+
+                        <div class="article-items">
+                          <h3 class="h5">Article Four:</h3>
+                          <p>
+                            The authorized persons or any employees of the
+                            account holder responsible for purchasing and
+                            receiving goods, whether under this agreement or any
+                            subsequent document, whether on a continuous or
+                            one-time basis, and whether their authorization is
+                            through a purchase order or independently, their
+                            signature on the invoice upon receipt shall be
+                            considered as final approval from the account holder
+                            regarding the accuracy of the received quantities,
+                            their value, weight, size, and type.
+                          </p>
+                        </div>
+
+                        <div class="article-items">
+                          <h3 class="h5">Article Five:</h3>
+                          <p>
+                            The company may rely on instructions from authorized
+                            signatories despite any conflicting information from
+                            public announcements or the account holder's
+                            commercial registry, until it receives a written
+                            notice from the account holder revoking those
+                            instructions.
+                          </p>
+                        </div>
+
+                        <div class="article-items">
+                          <h3 class="h5">Article Six:</h3>
+                          <p>
+                            The account holder must notify the company in
+                            writing of any modification or change to their legal
+                            entity, including the transfer of the establishment.
+                            No modification or change shall be binding on the
+                            company unless it is officially notified. If the
+                            company is not notified, the account holder shall
+                            bear full responsibility for any outstanding debts
+                            of the establishment and is obligated
+                          </p>
+                        </div>
+
+                        <div class="article-items">
+                          <h3 class="h5">Article Seven:</h3>
+                          <p>
+                            This agreement is subject to the laws and
+                            regulations in force in the Kingdom of Saudi Arabia.
+                            In the event of any dispute, it shall be resolved
+                            amicably between the two parties. If an amicable
+                            resolution is not possible, the dispute shall be
+                            referred to the competent court in Riyadh.
+                          </p>
+                        </div>
+
+                        <div class="article-items">
+                          <h3 class="h5">Personal Commitment:</h3>
+                          <p>
+                            I accept full responsibility for paying all amounts
+                            owed from my personal account related to the debts
+                            of the account holder to Exal International Trading
+                            Company. This responsibility remains in the event of
+                            any business difficulties, sale, or closure. I
+                            acknowledge that I must inform Exal International
+                            Trading Company at least two months in advance of
+                            any emergencies, sales, or closures; an announcement
+                            in the newspaper will not fulfill this requirement.
+                            I will not transfer the debt to a new owner without
+                            written consent from Exal International Trading
+                            Company, and should the new owner default on payment
+                            obligations, I will assume full responsibility for
+                            any remaining debt. I, the undersigned, confirm that
+                            I accept this agreement after reading and
+                            comprehending its terms, provisions, and conditions,
+                            providing clear and informed consent in accordance
+                            with legal requirements.
+                          </p>
+                        </div>
+                      </div>
+                    </article>
+                </div>
+
+                    <div class="col-12">
+                      <div class="mb-3">
+                        <label for="validationApplicantName" class="form-label"
+                          >Applicant: <span>*</span></label
+                        >
+                        <input
+                          type="text"
+                          class="form-control"
+                          id="validationApplicantName"
+                          placeholder="Applicant Name"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                            Please Enter The Applicant Name
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="col-12">
+                        <div class="form-check">
+                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
+                          <label class="form-check-label" for="invalidCheck">
+                            Agree to terms and conditions
+                          </label>
+                          <div class="invalid-feedback">
+                            You must agree before submitting.
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mt-4">
+                        <button class="btn btn-primary w-100" type="submit" id="submit">Submit Form</button>
+                      </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
+  </body>
+</html>
