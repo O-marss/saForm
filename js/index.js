@@ -1,3 +1,7 @@
+const form = document.getElementById('form');
+const result = document.getElementById('result');
+
+
 (() => {
     'use strict'
   
@@ -11,34 +15,42 @@
           event.preventDefault()
           event.stopPropagation()
         }
-  
+
         form.classList.add('was-validated')
+        form.addEventListener('submit', function(e) {
+    
+            const formData = new FormData(form);
+            e.preventDefault();
+        
+            const object = Object.fromEntries(formData);
+            const json = JSON.stringify(object);
+        
+            result.innerHTML = "Please wait..."
+        
+            fetch('https://api.web3forms.com/submit', {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                        'Accept': 'application/json'
+                    },
+                    body: json
+                })
+                .then(async (response) => {
+                    let json = await response.json();
+                    if (response.status == 200) {
+                        result.innerHTML = json.message;
+                    } else {
+                        console.log(response);
+                        result.innerHTML = json.message;
+                    }
+                })
+                .catch(error => {
+                    console.log(error);
+                    result.innerHTML = "Something went wrong!";
+                })
+        });
       }, false)
     })
-  })()
+  })();
 
-  let form = document.getElementById('form');
 
-function sendEmail(){
-    Email.send({
-        SecureToken : "270d044d-9173-4738-a991-4c9c7fc56ea3",
-        To : '0marm07med3010@gmail.com',
-        From : "0marm07med3010@gmail.com",
-        Subject : "Test",
-        Body : `Company Name: ${document.getElementById('validationCompanyname').value}
-                <br> Registration number: ${document.getElementById('validationRegistrationNumber').value}
-                <br> Date of incorporation: ${document.getElementById('validationDateOfIncorporation').value}
-                <br> Company Type: ${document.getElementById('validationCompanyType').value}
-                <br> Correspondence mail: ${document.getElementById('validationCorrespondenceMail').value}
-                <br> Tax number: ${document.getElementById('validationTaxNumber').value}
-                <br> General Manager Name: ${document.getElementById('validationGeneralManager').value}
-                <br> General Manager Email: ${document.getElementById('validationGeneralEmail').value}
-                <br> General Manager Mobile: ${document.getElementById('validationGeneralMobile').value}
-                <br> Procurement Director Name: ${document.getElementById('validationProcurementDirectorName').value}
-                <br> Procurement Director Email: ${document.getElementById('validationProcurementDirectorEmail').value}
-                <br> Procurement Director Mobile: ${document.getElementById('validationProcurementDirectorMobile').value}
-                `
-    }).then(
-      () => alert("Form Sent Successfully")
-    );
-}

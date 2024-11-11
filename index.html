@@ -15,17 +15,29 @@
           <div class="row">
             <div class="col-12">
               <div id="form-container">
-                <form class="row needs-validation" novalidate id="form" onsubmit="sendEmail(); reset(); return false">
+                <form
+                  id="form"
+                  method="POST"
+                  class="row needs-validation"
+                  novalidate
+                >
+                  <input
+                    type="hidden"
+                    name="access_key"
+                    value="73756668-453a-4525-b523-87f4c891d1f8"
+                  />
                   <div class="col-md-4">
                     <div class="mb-3">
                       <label for="validationCompanyname" class="form-label"
                         >Company Name: <span>*</span></label
                       >
                       <input
+                        name="Compnay Name"
                         type="text"
                         class="form-control"
                         id="validationCompanyname"
                         placeholder="A full name is required"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -36,14 +48,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationRegistrationNumber" class="form-label"
+                      <label
+                        for="validationRegistrationNumber"
+                        class="form-label"
                         >Registration number: <span>*</span></label
                       >
                       <input
+                        name="Registration number"
                         type="text"
                         class="form-control"
                         id="validationRegistrationNumber"
                         placeholder="Registration Number"
+                        value=""
                         required
                       />
 
@@ -55,14 +71,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationDateOfIncorporation" class="form-label"
+                      <label
+                        for="validationDateOfIncorporation"
+                        class="form-label"
                         >Date of incorporation: <span>*</span></label
                       >
                       <input
+                        name="Date of incorporation"
                         type="date"
                         class="form-control"
                         id="validationDateOfIncorporation"
                         placeholder="Date of Incorporation"
+                        value=""
                         required
                       />
 
@@ -78,10 +98,12 @@
                         >Company type: <span>*</span></label
                       >
                       <input
+                        name="Company type"
                         type="text"
                         class="form-control"
                         id="validationCompanyType"
                         placeholder="Company Type"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -92,14 +114,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationCorrespondenceMail" class="form-label"
+                      <label
+                        for="validationCorrespondenceMail"
+                        class="form-label"
                         >Correspondence mail: <span>*</span></label
                       >
                       <input
+                        name="Correspondence mail"
                         type="email"
                         class="form-control"
                         id="validationCorrespondenceMail"
                         placeholder="name@example.com"
+                        value=""
                         required
                       />
 
@@ -115,10 +141,12 @@
                         >Tax number: <span>*</span></label
                       >
                       <input
+                        name="Tax number"
                         type="text"
                         class="form-control"
                         id="validationTaxNumber"
                         placeholder="Tax Number"
+                        value=""
                         required
                       />
 
@@ -134,17 +162,18 @@
                         >general manager: <span>*</span></label
                       >
                       <input
+                        name="General Manager"
                         type="text"
                         class="form-control"
                         id="validationGeneralManager"
                         placeholder="A full name is required"
+                        value=""
                         required
                       />
 
                       <div class="invalid-feedback">
                         Please Enter General Manager Name
                       </div>
-
                     </div>
                   </div>
 
@@ -154,10 +183,12 @@
                         >Email: <span>*</span></label
                       >
                       <input
+                        name="General Manager Email"
                         type="email"
                         class="form-control"
                         id="validationGeneralEmail"
                         placeholder="name@example.com"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -172,10 +203,12 @@
                         >Mobile number: <span>*</span></label
                       >
                       <input
+                        name="General Manager Mobile"
                         type="tel"
                         class="form-control"
                         id="validationGeneralMobile"
                         placeholder="0500000000"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -186,14 +219,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationProcurementDirectorName" class="form-label"
+                      <label
+                        for="validationProcurementDirectorName"
+                        class="form-label"
                         >Procurement Director: <span>*</span></label
                       >
                       <input
+                        name="Procurement Director"
                         type="text"
                         class="form-control"
                         id="validationProcurementDirectorName"
                         placeholder="A full name is required"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -204,14 +241,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationProcurementDirectorEmail" class="form-label"
+                      <label
+                        for="validationProcurementDirectorEmail"
+                        class="form-label"
                         >Email: <span>*</span></label
                       >
                       <input
+                        name="Procurement Director Email"
                         type="email"
                         class="form-control"
                         id="validationProcurementDirectorEmail"
                         placeholder="name@example.com"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -222,14 +263,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationProcurementDirectorMobile" class="form-label"
+                      <label
+                        for="validationProcurementDirectorMobile"
+                        class="form-label"
                         >Mobile number: <span>*</span></label
                       >
                       <input
+                        name="Procurement Director Mobile"
                         type="tel"
                         class="form-control"
                         id="validationProcurementDirectorMobile"
                         placeholder="0500000000"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -240,14 +285,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationFinanceManagerName" class="form-label"
+                      <label
+                        for="validationFinanceManagerName"
+                        class="form-label"
                         >finance manager: <span>*</span></label
                       >
                       <input
+                        name="Finance Manager"
                         type="text"
                         class="form-control"
                         id="validationFinanceManagerName"
                         placeholder="A full name is required"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -258,14 +307,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationFinanceManagerEmail" class="form-label"
+                      <label
+                        for="validationFinanceManagerEmail"
+                        class="form-label"
                         >Email: <span>*</span></label
                       >
                       <input
+                        name="Finance Manager Email"
                         type="email"
                         class="form-control"
                         id="validationFinanceManagerEmail"
                         placeholder="name@example.com"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -276,14 +329,18 @@
 
                   <div class="col-md-4">
                     <div class="mb-3">
-                      <label for="validationFinanceManagerMobile" class="form-label"
+                      <label
+                        for="validationFinanceManagerMobile"
+                        class="form-label"
                         >Mobile number: <span>*</span></label
                       >
                       <input
+                        name="Finance Manager Mobile"
                         type="tel"
                         class="form-control"
                         id="validationFinanceManagerMobile"
                         placeholder="0500000000"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -298,10 +355,12 @@
                         >Owner: <span>*</span></label
                       >
                       <input
+                        name="Owner"
                         type="text"
                         class="form-control"
                         id="validationOwnerName"
                         placeholder="A full name is required"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -316,10 +375,13 @@
                         >ID number: <span>*</span></label
                       >
                       <input
+                        name="Owner ID Number"
                         type="text"
                         class="form-control"
                         id="validationOwnerID"
                         placeholder="ID Number"
+                        value=""
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -334,10 +396,12 @@
                         >Mobile number: <span>*</span></label
                       >
                       <input
+                        name="Owner Mobile"
                         type="tel"
                         class="form-control"
                         id="validationOwnerMobile"
                         placeholder="0500000000"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -362,14 +426,18 @@
 
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="validationCreditLimitNumber" class="form-label"
+                      <label
+                        for="validationCreditLimitNumber"
+                        class="form-label"
                         >Credit limit: <span>*</span></label
                       >
                       <input
+                        name="Credit Limit"
                         type="number"
                         class="form-control"
                         id="validationCreditLimitNumber"
                         placeholder="Credit Limit"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -380,14 +448,18 @@
 
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="validationCreditLimitWriting" class="form-label"
+                      <label
+                        for="validationCreditLimitWriting"
+                        class="form-label"
                         >Credit limit in writing: <span>*</span></label
                       >
                       <input
+                        name="Credit limit in writing"
                         type="text"
                         class="form-control"
                         id="validationCreditLimitWriting"
                         placeholder="Credit Limit in Writing"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -420,14 +492,18 @@
 
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="validationFirstAuthorizedName" class="form-label"
+                      <label
+                        for="validationFirstAuthorizedName"
+                        class="form-label"
                         >The first authorized: <span>*</span></label
                       >
                       <input
+                        name="The first authorized"
                         type="text"
                         class="form-control"
                         id="validationFirstAuthorizedName"
                         placeholder="Name"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -438,14 +514,18 @@
 
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="validationFirstAuthorizedId" class="form-label"
+                      <label
+                        for="validationFirstAuthorizedId"
+                        class="form-label"
                         >iD number: <span>*</span></label
                       >
                       <input
+                        name="The first authorized iD number"
                         type="text"
                         class="form-control"
                         id="validationFirstAuthorizedId"
                         placeholder="ID Number"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -456,14 +536,18 @@
 
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="validationSecondAuthorizedName" class="form-label"
+                      <label
+                        for="validationSecondAuthorizedName"
+                        class="form-label"
                         >The second authorized: <span>*</span></label
                       >
                       <input
+                        name="The second authorized"
                         type="text"
                         class="form-control"
                         id="validationSecondAuthorizedName"
                         placeholder="Name"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -474,14 +558,18 @@
 
                   <div class="col-md-6">
                     <div class="mb-3">
-                      <label for="validationSecondAuthorizedId" class="form-label"
+                      <label
+                        for="validationSecondAuthorizedId"
+                        class="form-label"
                         >iD number: <span>*</span></label
                       >
                       <input
+                        name="The second authorized iD number"
                         type="text"
                         class="form-control"
                         id="validationSecondAuthorizedId"
                         placeholder="ID Number"
+                        value=""
                         required
                       />
                       <div class="invalid-feedback">
@@ -645,40 +733,55 @@
                         </div>
                       </div>
                     </article>
-                </div>
+                  </div>
 
-                    <div class="col-12">
-                      <div class="mb-3">
-                        <label for="validationApplicantName" class="form-label"
-                          >Applicant: <span>*</span></label
-                        >
-                        <input
-                          type="text"
-                          class="form-control"
-                          id="validationApplicantName"
-                          placeholder="Applicant Name"
-                          required
-                        />
-                        <div class="invalid-feedback">
-                            Please Enter The Applicant Name
-                        </div>
+                  <div class="col-12">
+                    <div class="mb-3">
+                      <label for="validationApplicantName" class="form-label"
+                        >Applicant: <span>*</span></label
+                      >
+                      <input
+                        name="Applicant"
+                        type="text"
+                        class="form-control"
+                        id="validationApplicantName"
+                        placeholder="Applicant Name"
+                        value=""
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Please Enter The Applicant Name
                       </div>
                     </div>
+                  </div>
 
-                    <div class="col-12">
-                        <div class="form-check">
-                          <input class="form-check-input" type="checkbox" value="" id="invalidCheck" required>
-                          <label class="form-check-label" for="invalidCheck">
-                            Agree to terms and conditions
-                          </label>
-                          <div class="invalid-feedback">
-                            You must agree before submitting.
-                          </div>
-                        </div>
+                  <div class="col-12">
+                    <div class="form-check">
+                      <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="invalidCheck"
+                        required
+                      />
+                      <label class="form-check-label" for="invalidCheck">
+                        Agree to terms and conditions
+                      </label>
+                      <div class="invalid-feedback">
+                        You must agree before submitting.
                       </div>
-                      <div class="col-12 mt-4">
-                        <button class="btn btn-primary w-100" type="submit" id="submit">Submit Form</button>
-                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 mt-4">
+                    <button
+                      class="btn btn-primary w-100"
+                      type="submit"
+                      id="submit"
+                    >
+                      Submit Form
+                    </button>
+                  </div>
+                  <div id="result"></div>
                 </form>
               </div>
             </div>
@@ -686,7 +789,6 @@
         </div>
       </section>
     </main>
-    <script src="https://smtpjs.com/v3/smtp.js"></script>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
     <script src="js/index.js"></script>
   </body>
