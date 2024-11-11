@@ -15,17 +15,13 @@ const result = document.getElementById('result');
           event.preventDefault()
           event.stopPropagation()
         }
-
         form.classList.add('was-validated')
         form.addEventListener('submit', function(e) {
-    
-            const formData = new FormData(form);
-            e.preventDefault();
-        
-            const object = Object.fromEntries(formData);
-            const json = JSON.stringify(object);
-        
-            result.innerHTML = "Please wait..."
+          e.preventDefault();
+          const formData = new FormData(form);
+          const object = Object.fromEntries(formData);
+          const json = JSON.stringify(object);
+          result.innerHTML = "Please wait..."
         
             fetch('https://api.web3forms.com/submit', {
                     method: 'POST',
@@ -38,7 +34,7 @@ const result = document.getElementById('result');
                 .then(async (response) => {
                     let json = await response.json();
                     if (response.status == 200) {
-                        result.innerHTML = json.message;
+                        result.innerHTML = "Form submitted successfully";
                     } else {
                         console.log(response);
                         result.innerHTML = json.message;
@@ -50,7 +46,9 @@ const result = document.getElementById('result');
                 })
         });
       }, false)
+      
     })
   })();
 
 
+ 
