@@ -1,9 +1,24 @@
 @media (min-width: 768px) {
-    
+    .main-header{
+        margin-top: 0.3125rem;
+        font-size: 0.875rem;
+    }
+
+    .main-date{
+        margin-top: 0.3125rem;
+        font-size: 0.875rem;
+    }
 }
   @media (min-width: 992px) {
     .logo-shape{
          top: -120px;
          right: -90px;
      }
+     .main-header{
+        font-size: 2rem;
+    }
+
+    .main-date{
+        font-size: 1.25rem;
+    }
   }

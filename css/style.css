@@ -24,21 +24,6 @@ header h1{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.logo {
-    /* display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    height: 30vh; */
-}
-
-
-.logo-img{
-    /* width: 400px; */
-    /* position: relative;
-    top: 0;
-    left: 30px; */
-}
-
 .logo-shape{
      position: relative;
     top: -40px;
@@ -53,7 +38,7 @@ label{
 .section-title{
     background-color: #674188;
     color: #fff;
-    padding: 5px 10px 5px;
+    padding: 0.3125rem 0.625rem 5px;
 }
 
 .section-title.h6{
@@ -62,7 +47,7 @@ label{
 
 
 #form-container form label{
-    font-size: 14px;
+    font-size: 0.875rem;
     font-weight: 600;
     text-transform: capitalize;
 }
@@ -87,7 +72,7 @@ label{
 
 #form-container form input .in
 .article-items{
-    margin-bottom: 30px;
+    margin-bottom: 1.875rem;
 }
 
 .article-items h3{
@@ -97,7 +82,7 @@ label{
 
 .invalid-feedback{
     background-color: rgba(220, 53, 69, 0.07);
-    padding: 5px;
+    padding: 0.3125rem;
 }
 
 .form-check-input{
