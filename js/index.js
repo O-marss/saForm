@@ -17,6 +17,7 @@ const result = document.getElementById("result");
         if (!form.checkValidity()) {
           event.preventDefault();
           event.stopPropagation();
+        }else{        form.addEventListener("submit", window.print())
         }
         form.classList.add("was-validated");
       },
