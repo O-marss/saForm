@@ -4,1188 +4,1220 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-    
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="media/media.css">
   </head>
   <body>
-    <header></header>
-    <main>
-      <section>
-        <div class="container py-5">
-          <div class="row">
-            <div class="col-12">
-              <div id="form-container">
-                <form
-                  id="form"
-                  method="POST"
-                  class="row needs-validation"
-                  novalidate
-                >
-                  <input
-                    type="hidden"
-                    name="access_key"
-                    value="73756668-453a-4525-b523-87f4c891d1f8"
-                  />
-                  <div class="col-12 section-title-container">
-                    <h2 class="h6 section-title" id="firstSectionTitle">
-                      بيانات الشركة / المؤسسة
-                    </h2>
-                  </div>
+    <div class="container border-1 border-black border overflow-x-hidden">
+      <header>
+        <div class="container">
+          <div class="logo row">
+            <img src="images/shape.jpg" alt="" class="logo-shape col-7 col-xl-7" />
 
-                  <div class="col-12">
-                    <div class="mb-3">
-                      <label
-                        for="validationCompanyName"
-                        class="form-label"
-                        id="companyNameLabel"
-                        >إسم الشركة <span>*</span></label
-                      >
-                      <input
-                        name="Compnay Name"
-                        type="text"
-                        class="form-control"
-                        id="validationCompanyName"
-                        placeholder="إسم الشركة كامل"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+            <img src="images/logo.png" alt="" class="logo-img col-5 col-xl-5" />
+          </div>
+          <h1 class="h2 m-0">اتفاقية طلب فتح حساب ائتمان</h1>
+          <p class="text-start ms-5 fw-bold">
+            التاريخ:&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;/&nbsp;&nbsp;&nbsp;
+          </p>
+        </div>
+      </header>
+      <main>
+        <section>
+          <div class="container pt-3 pb-5">
+            <div class="row">
+              <div class="col-12">
+                <div id="form-container">
+                  <form
+                    id="form"
+                    class="row needs-validation"
+                    novalidate
+                  >
+                    <div class="col-12 section-title-container">
+                      <h2 class="h6 section-title" id="firstSectionTitle">
+                        بيانات الشركة / المؤسسة
+                      </h2>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationTradeName"
-                        class="form-label"
-                        id="tradeNameLabel"
-                        >الإسم التجاري <span>*</span></label
-                      >
-                      <input
-                        name="Trade Name"
-                        type="text"
-                        class="form-control"
-                        id="validationTradeName"
-                        placeholder="الإسم التجاري"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-12">
+                      <div class="mb-3">
+                        <label
+                          for="validationCompanyName"
+                          class="form-label"
+                          id="companyNameLabel"
+                          >إسم الشركة <span>*</span></label
+                        >
+                        <input
+                          name="Compnay Name"
+                          type="text"
+                          class="form-control"
+                          id="validationCompanyName"
+                          placeholder="إسم الشركة كامل"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationBusinessActivity"
-                        class="form-label"
-                        id="businessActivityLabel"
-                        >النشاط التجاري <span>*</span></label
-                      >
-                      <input
-                        name="Business Activity"
-                        type="text"
-                        class="form-control"
-                        id="validationBusinessActivity"
-                        placeholder="النشاط التجاري"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationTradeName"
+                          class="form-label"
+                          id="tradeNameLabel"
+                          >الإسم التجاري <span>*</span></label
+                        >
+                        <input
+                          name="Trade Name"
+                          type="text"
+                          class="form-control"
+                          id="validationTradeName"
+                          placeholder="الإسم التجاري"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationRegistrationNumber"
-                        class="form-label"
-                        id="registrationNumberLabel"
-                        >رقم السجل <span>*</span></label
-                      >
-                      <input
-                        name="Registration number"
-                        type="text"
-                        class="form-control"
-                        id="validationRegistrationNumber"
-                        placeholder="رقم السجل"
-                        value=""
-                        required
-                      />
-
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationBusinessActivity"
+                          class="form-label"
+                          id="businessActivityLabel"
+                          >النشاط التجاري <span>*</span></label
+                        >
+                        <input
+                          name="Business Activity"
+                          type="text"
+                          class="form-control"
+                          id="validationBusinessActivity"
+                          placeholder="النشاط التجاري"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationDateOfIncorporation"
-                        class="form-label"
-                        id="dateOfIncorporationLabel"
-                        >تاريخ السجل <span>*</span></label
-                      >
-                      <input
-                        name="Date of incorporation"
-                        type="date"
-                        class="form-control"
-                        id="validationDateOfIncorporation"
-                        placeholder=""
-                        value=""
-                        required
-                      />
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationRegistrationNumber"
+                          class="form-label"
+                          id="registrationNumberLabel"
+                          >رقم السجل <span>*</span></label
+                        >
+                        <input
+                          name="Registration number"
+                          type="text"
+                          class="form-control"
+                          id="validationRegistrationNumber"
+                          placeholder="رقم السجل"
+                          value=""
+                          required
+                        />
 
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationUnifiedNumber"
-                        class="form-label"
-                        id="unifiedNumberLabel"
-                        >الرقم الموحد <span>*</span></label
-                      >
-                      <input
-                        name="Unified Number"
-                        type="number"
-                        class="form-control"
-                        id="validationUnifiedNumber"
-                        placeholder="الرقم الموحد"
-                        value=""
-                        required
-                      />
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationDateOfIncorporation"
+                          class="form-label"
+                          id="dateOfIncorporationLabel"
+                          >تاريخ السجل <span>*</span></label
+                        >
+                        <input
+                          name="Date of incorporation"
+                          type="date"
+                          class="form-control"
+                          id="validationDateOfIncorporation"
+                          placeholder=""
+                          value=""
+                          required
+                        />
 
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationTaxNumber"
-                        class="form-label"
-                        id="taxNumberLabel"
-                        >الرقم الضريبي <span>*</span></label
-                      >
-                      <input
-                        name="Tax number"
-                        type="text"
-                        class="form-control"
-                        id="validationTaxNumber"
-                        placeholder="الرقم الضريبي"
-                        value=""
-                        required
-                      />
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationUnifiedNumber"
+                          class="form-label"
+                          id="unifiedNumberLabel"
+                          >الرقم الموحد <span>*</span></label
+                        >
+                        <input
+                          name="Unified Number"
+                          type="number"
+                          class="form-control"
+                          id="validationUnifiedNumber"
+                          placeholder="الرقم الموحد"
+                          value=""
+                          required
+                        />
 
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-12 section-title-container">
-                    <h2 class="h6 section-title" id="secondSectionTitle">
-                      عنوان الشركة / المؤسسة
-                    </h2>
-                  </div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationTaxNumber"
+                          class="form-label"
+                          id="taxNumberLabel"
+                          >الرقم الضريبي <span>*</span></label
+                        >
+                        <input
+                          name="Tax number"
+                          type="text"
+                          class="form-control"
+                          id="validationTaxNumber"
+                          placeholder="الرقم الضريبي"
+                          value=""
+                          required
+                        />
 
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label
-                        for="validationPostOffice"
-                        class="form-label"
-                        id="postOfficeLabel"
-                        >صندوق بريدي <span>*</span></label
-                      >
-                      <input
-                        name="Post Office"
-                        type="text"
-                        class="form-control"
-                        id="validationPostOffice"
-                        placeholder="صندوق بريدي"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label
-                        for="validationPostalCode"
-                        class="form-label"
-                        id="postalCodeLabel"
-                        >الرمز البريدي <span>*</span></label
-                      >
-                      <input
-                        name="Postal Code"
-                        type="number"
-                        class="form-control"
-                        id="validationPostalCode"
-                        placeholder="الرمز البريدي"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-12 section-title-container">
+                      <h2 class="h6 section-title" id="secondSectionTitle">
+                        عنوان الشركة / المؤسسة
+                      </h2>
                     </div>
-                  </div>
 
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label
-                        for="validationCity"
-                        class="form-label"
-                        id="cityLabel"
-                        >المدينة <span>*</span></label
-                      >
-                      <input
-                        name="City"
-                        type="text"
-                        class="form-control"
-                        id="validationCity"
-                        placeholder="المدينة"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="validationPostOffice"
+                          class="form-label"
+                          id="postOfficeLabel"
+                          >صندوق بريدي <span>*</span></label
+                        >
+                        <input
+                          name="Post Office"
+                          type="text"
+                          class="form-control"
+                          id="validationPostOffice"
+                          placeholder="صندوق بريدي"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationDistrictName"
-                        class="form-label"
-                        id="districtNameLabel"
-                        >إسم الحي<span>*</span></label
-                      >
-                      <input
-                        name="District Name"
-                        type="text"
-                        class="form-control"
-                        id="validationDistrictName"
-                        placeholder="إسم الحي"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="validationPostalCode"
+                          class="form-label"
+                          id="postalCodeLabel"
+                          >الرمز البريدي <span>*</span></label
+                        >
+                        <input
+                          name="Postal Code"
+                          type="number"
+                          class="form-control"
+                          id="validationPostalCode"
+                          placeholder="الرمز البريدي"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationStreet"
-                        class="form-label"
-                        id="streetLabel"
-                        >الشارع<span>*</span></label
-                      >
-                      <input
-                        name="Street"
-                        type="text"
-                        class="form-control"
-                        id="validationStreet"
-                        placeholder="الشارع"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="validationCity"
+                          class="form-label"
+                          id="cityLabel"
+                          >المدينة <span>*</span></label
+                        >
+                        <input
+                          name="City"
+                          type="text"
+                          class="form-control"
+                          id="validationCity"
+                          placeholder="المدينة"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationCompanyPhoneNumber"
-                        class="form-label"
-                        id="companyPhoneNumberLabel"
-                        >رقم الهاتف<span>*</span></label
-                      >
-                      <input
-                        name="Company Phone Number"
-                        type="tel"
-                        class="form-control"
-                        id="validationCompanyPhoneNumber"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationDistrictName"
+                          class="form-label"
+                          id="districtNameLabel"
+                          >إسم الحي<span>*</span></label
+                        >
+                        <input
+                          name="District Name"
+                          type="text"
+                          class="form-control"
+                          id="validationDistrictName"
+                          placeholder="إسم الحي"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationCompanyMobileNumber"
-                        class="form-label"
-                        id="companyMobileNumberLabel"
-                        >رقم الجوال<span>*</span></label
-                      >
-                      <input
-                        name="Company Mobile Number"
-                        type="tel"
-                        class="form-control"
-                        id="validationCompanyMobileNumber"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationStreet"
+                          class="form-label"
+                          id="streetLabel"
+                          >الشارع<span>*</span></label
+                        >
+                        <input
+                          name="Street"
+                          type="text"
+                          class="form-control"
+                          id="validationStreet"
+                          placeholder="الشارع"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-12">
-                    <div class="mb-3">
-                      <label
-                        for="validationCompanyEmail"
-                        class="form-label"
-                        id="companyEmailLabel"
-                        >البريد الإلكتروني للمنشأة <span>*</span></label
-                      >
-                      <input
-                        name="Company Email"
-                        type="email"
-                        class="form-control"
-                        id="validationCompanyEmail"
-                        placeholder="name@example.com"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationCompanyPhoneNumber"
+                          class="form-label"
+                          id="companyPhoneNumberLabel"
+                          >رقم الهاتف<span>*</span></label
+                        >
+                        <input
+                          name="Company Phone Number"
+                          type="tel"
+                          class="form-control"
+                          id="validationCompanyPhoneNumber"
+                          placeholder=""
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-12 section-title-container">
-                    <h2 class="h6 section-title" id="thirdSectionTitle">
-                      البنوك المتعامل معها
-                    </h2>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label
-                        for="validationBankName"
-                        class="form-label"
-                        id="bankNameLabel"
-                        >إسم البنك<span>*</span></label
-                      >
-                      <input
-                        name="Bank Name"
-                        type="text"
-                        class="form-control"
-                        id="validationBankName"
-                        placeholder="إسم البنك"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label
+                          for="validationCompanyMobileNumber"
+                          class="form-label"
+                          id="companyMobileNumberLabel"
+                          >رقم الجوال<span>*</span></label
+                        >
+                        <input
+                          name="Company Mobile Number"
+                          type="tel"
+                          class="form-control"
+                          id="validationCompanyMobileNumber"
+                          placeholder=""
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-8">
-                    <div class="mb-3">
-                      <label
-                        for="validationBankAccountNumber"
-                        class="form-label"
-                        id="accountNumberLabel"
-                        >رقم الحساب <span>*</span></label
-                      >
-                      <input
-                        name="Bank Account Number"
-                        type="text"
-                        class="form-control"
-                        id="validationBankAccountNumber"
-                        placeholder="رقم الحساب"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-12">
+                      <div class="mb-3">
+                        <label
+                          for="validationCompanyEmail"
+                          class="form-label"
+                          id="companyEmailLabel"
+                          >البريد الإلكتروني للمنشأة <span>*</span></label
+                        >
+                        <input
+                          name="Company Email"
+                          type="email"
+                          class="form-control"
+                          id="validationCompanyEmail"
+                          placeholder="name@example.com"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-12">
-                    <div class="mb-3">
-                      <label
-                        for="validationIbanNumber"
-                        class="form-label"
-                        id="ibanNumberLabel"
-                        >رقم IBAN<span>*</span></label
-                      >
-                      <input
-                        name="IBAN Number"
-                        type="text"
-                        class="form-control"
-                        id="validationIbanNumber"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-12 section-title-container">
+                      <h2 class="h6 section-title" id="thirdSectionTitle">
+                        البنوك المتعامل معها
+                      </h2>
                     </div>
-                  </div>
 
-                  <div class="col-12 section-title-container">
-                    <h2 class="h6 section-title" id="fourthSectionTitle">
-                      المراجع التجارية / موردون نتعامل أو تعاملنا معهم
-                    </h2>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFirstSupplierName"
-                        class="form-label"
-                        id="firstSupplierNameLabel"
-                        >إسم الشركة <span>*</span></label
-                      >
-                      <input
-                        name="First Supplier Name"
-                        type="text"
-                        class="form-control"
-                        id="validationFirstSupplierName"
-                        placeholder="إسم الشركة كامل"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label
+                          for="validationBankName"
+                          class="form-label"
+                          id="bankNameLabel"
+                          >إسم البنك<span>*</span></label
+                        >
+                        <input
+                          name="Bank Name"
+                          type="text"
+                          class="form-control"
+                          id="validationBankName"
+                          placeholder="إسم البنك"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationSecondSupplierName"
-                        class="form-label"
-                        id="secondSupplierNameLabel"
-                        >إسم الشركة <span>*</span></label
-                      >
-                      <input
-                        name="Second Supplier Name"
-                        type="text"
-                        class="form-control"
-                        id="validationSecondSupplierName"
-                        placeholder="إسم الشركة كامل"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-8">
+                      <div class="mb-3">
+                        <label
+                          for="validationBankAccountNumber"
+                          class="form-label"
+                          id="accountNumberLabel"
+                          >رقم الحساب <span>*</span></label
+                        >
+                        <input
+                          name="Bank Account Number"
+                          type="text"
+                          class="form-control"
+                          id="validationBankAccountNumber"
+                          placeholder="رقم الحساب"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFirstResponsiblePerson"
-                        class="form-label"
-                        id="firstResponsiblePersonLabel"
-                        >الشخص المسؤول<span>*</span></label
-                      >
-                      <input
-                        name="First Responsible Person Name"
-                        type="text"
-                        class="form-control"
-                        id="validationFirstResponsiblePerson"
-                        placeholder="الإسم كامل"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-12">
+                      <div class="mb-3">
+                        <label
+                          for="validationIbanNumber"
+                          class="form-label"
+                          id="ibanNumberLabel"
+                          >رقم IBAN<span>*</span></label
+                        >
+                        <input
+                          name="IBAN Number"
+                          type="text"
+                          class="form-control"
+                          id="validationIbanNumber"
+                          placeholder=""
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationSecondResponsiblePerson"
-                        class="form-label"
-                        id="secondResponsiblePersonLabel"
-                        >الشخص المسؤول<span>*</span></label
-                      >
-                      <input
-                        name="Second Responsible Person Name"
-                        type="text"
-                        class="form-control"
-                        id="validationSecondResponsiblePerson"
-                        placeholder="الإسم كامل"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-12 section-title-container">
+                      <h2 class="h6 section-title" id="fourthSectionTitle">
+                        المراجع التجارية / موردون نتعامل أو تعاملنا معهم
+                      </h2>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFirstSupplierPhone"
-                        class="form-label"
-                        id="firstSupplierPhoneLabel"
-                        >رقم الجوال<span>*</span></label
-                      >
-                      <input
-                        name="First Company Phone"
-                        type="tel"
-                        class="form-control"
-                        id="validationFirstSupplierPhone"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFirstSupplierName"
+                            class="form-label"
+                            id="firstSupplierNameLabel"
+                            >إسم الشركة <span>*</span></label
+                          >
+                          <input
+                            name="First Supplier Name"
+                            type="text"
+                            class="form-control"
+                            id="validationFirstSupplierName"
+                            placeholder="إسم الشركة كامل"
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFirstResponsiblePerson"
+                            class="form-label"
+                            id="firstResponsiblePersonLabel"
+                            >الشخص المسؤول<span>*</span></label
+                          >
+                          <input
+                            name="First Responsible Person Name"
+                            type="text"
+                            class="form-control"
+                            id="validationFirstResponsiblePerson"
+                            placeholder="الإسم كامل"
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFirstSupplierPhone"
+                            class="form-label"
+                            id="firstSupplierPhoneLabel"
+                            >رقم الجوال<span>*</span></label
+                          >
+                          <input
+                            name="First Company Phone"
+                            type="tel"
+                            class="form-control"
+                            id="validationFirstSupplierPhone"
+                            placeholder=""
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationSecondSupplierPhone"
-                        class="form-label"
-                        id="secondSupplierPhoneLabel"
-                        >رقم الجوال<span>*</span></label
-                      >
-                      <input
-                        name="Second Company Phone"
-                        type="tel"
-                        class="form-control"
-                        id="validationSecondSupplierPhone"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationSecondSupplierName"
+                            class="form-label"
+                            id="secondSupplierNameLabel"
+                            >إسم الشركة <span>*</span></label
+                          >
+                          <input
+                            name="Second Supplier Name"
+                            type="text"
+                            class="form-control"
+                            id="validationSecondSupplierName"
+                            placeholder="إسم الشركة كامل"
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationSecondResponsiblePerson"
+                            class="form-label"
+                            id="secondResponsiblePersonLabel"
+                            >الشخص المسؤول<span>*</span></label
+                          >
+                          <input
+                            name="Second Responsible Person Name"
+                            type="text"
+                            class="form-control"
+                            id="validationSecondResponsiblePerson"
+                            placeholder="الإسم كامل"
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationSecondSupplierPhone"
+                            class="form-label"
+                            id="secondSupplierPhoneLabel"
+                            >رقم الجوال<span>*</span></label
+                          >
+                          <input
+                            name="Second Company Phone"
+                            type="tel"
+                            class="form-control"
+                            id="validationSecondSupplierPhone"
+                            placeholder=""
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-12 section-title-container">
-                    <h2 class="h6 section-title" id="fifthSectionTitle">
-                      المديـر / المديـرون
-                    </h2>
-                  </div>
-
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationGeneralManagerName"
-                        class="form-label"
-                        id="generalManagerNamelabel"
-                      >
-                        المدير العام<span>*</span></label
-                      >
-                      <input
-                        name="General Manager Name"
-                        type="text"
-                        class="form-control"
-                        id="validationGeneralManagerName"
-                        placeholder="الإسم كامل"
-                        value=""
-                        required
-                      />
-
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-12 section-title-container">
+                      <h2 class="h6 section-title" id="fifthSectionTitle">
+                        المديـر / المديـرون
+                      </h2>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFinanceManagerName"
-                        class="form-label"
-                        id="financeManagerNamelabel"
-                      >
-                        المدير المالي<span>*</span></label
-                      >
-                      <input
-                        name="Finance Manager Name"
-                        type="text"
-                        class="form-control"
-                        id="validationFinanceManagerName"
-                        placeholder="الإسم كامل"
-                        value=""
-                        required
-                      />
+                    <div class="col-md-6">
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationGeneralManagerName"
+                            class="form-label"
+                            id="generalManagerNamelabel"
+                          >
+                            المدير العام<span>*</span></label
+                          >
+                          <input
+                            name="General Manager Name"
+                            type="text"
+                            class="form-control"
+                            id="validationGeneralManagerName"
+                            placeholder="الإسم كامل"
+                            value=""
+                            required
+                          />
 
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationGeneralEmail"
+                            class="form-label"
+                            id="generalManagerEmaillabel"
+                          >
+                            البريد الإلكتروني<span>*</span></label
+                          >
+                          <input
+                            name="General Manager Email"
+                            type="email"
+                            class="form-control"
+                            id="validationGeneralEmail"
+                            placeholder="name@example.com"
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationGeneralMobile"
+                            class="form-label"
+                            id="generalManagerMobilelabel"
+                          >
+                            رقم الجوال<span>*</span></label
+                          >
+                          <input
+                            name="General Manager Mobile"
+                            type="tel"
+                            class="form-control"
+                            id="validationGeneralMobile"
+                            placeholder=""
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationGeneralEmail"
-                        class="form-label"
-                        id="generalManagerEmaillabel"
-                      >
-                        البريد الإلكتروني<span>*</span></label
-                      >
-                      <input
-                        name="General Manager Email"
-                        type="email"
-                        class="form-control"
-                        id="validationGeneralEmail"
-                        placeholder="name@example.com"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFinanceManagerName"
+                            class="form-label"
+                            id="financeManagerNamelabel"
+                          >
+                            المدير المالي<span>*</span></label
+                          >
+                          <input
+                            name="Finance Manager Name"
+                            type="text"
+                            class="form-control"
+                            id="validationFinanceManagerName"
+                            placeholder="الإسم كامل"
+                            value=""
+                            required
+                          />
+
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFinanceManagerEmail"
+                            class="form-label"
+                            id="financeManagerEmaillabel"
+                          >
+                            البريد الإلكتروني<span>*</span></label
+                          >
+                          <input
+                            name="Finance Manager Email"
+                            type="email"
+                            class="form-control"
+                            id="validationFinanceManagerEmail"
+                            placeholder="name@example.com"
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFinanceManagerMobile"
+                            class="form-label"
+                            id="financeManagerMobilelabel"
+                          >
+                            رقم الجوال<span>*</span></label
+                          >
+                          <input
+                            name="Finance Manager Mobile"
+                            type="tel"
+                            class="form-control"
+                            id="validationFinanceManagerMobile"
+                            placeholder=""
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFinanceManagerEmail"
-                        class="form-label"
-                        id="financeManagerEmaillabel"
-                      >
-                        البريد الإلكتروني<span>*</span></label
-                      >
-                      <input
-                        name="Finance Manager Email"
-                        type="email"
-                        class="form-control"
-                        id="validationFinanceManagerEmail"
-                        placeholder="name@example.com"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-12 section-title-container">
+                      <h2 class="h6 section-title" id="sixthSectionTitle">
+                        المرفقات الرئيسية لقبول الطلب
+                      </h2>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationGeneralMobile"
-                        class="form-label"
-                        id="generalManagerMobilelabel"
-                      >
-                        رقم الجوال<span>*</span></label
-                      >
-                      <input
-                        name="General Manager Mobile"
-                        type="tel"
-                        class="form-control"
-                        id="validationGeneralMobile"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >تعبئة سند لأمر مع ختم الشركة المعتمد
+                          </label
+                        >
+                        <input
+                          type="file"
+                          class="form-control chooseFile"
+                          aria-label="file example"
+                          
+                        />
+                        <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFinanceManagerMobile"
-                        class="form-label"
-                        id="financeManagerMobilelabel"
-                      >
-                        رقم الجوال<span>*</span></label
-                      >
-                      <input
-                        name="Finance Manager Mobile"
-                        type="tel"
-                        class="form-control"
-                        id="validationFinanceManagerMobile"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >صورة من السجل التجاري<span>*</span></label
+                        >
+
+                        <input
+                          type="file"
+                          class="form-control chooseFile"
+                          aria-label="file example"
+                          required
+                        />
+                        <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-12 section-title-container">
-                    <h2 class="h6 section-title" id="sixthSectionTitle">
-                      المرفقات الرئيسية لقبول الطلب
-                    </h2>
-                  </div>
-
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >تعبئة سند لأمر مع ختم الشركة المعتمد<span
-                          >*</span
-                        ></label
-                      >
-                      <input
-                        type="file"
-                        class="form-control chooseFile"
-                        aria-label="file example"
-                        required
-                      />
-                      <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >شهادة التسجيل الضريبي<span>*</span></label
+                        >
+                        <input
+                          type="file"
+                          class="form-control chooseFile"
+                          aria-label="file example"
+                          required
+                        />
+                        <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >صورة من السجل التجاري<span>*</span></label
-                      >
-
-                      <input
-                        type="file"
-                        class="form-control chooseFile"
-                        aria-label="file example"
-                        required
-                      />
-                      <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >رخصة التشغيل<span>*</span></label
+                        >
+                        <input
+                          type="file"
+                          class="form-control chooseFile"
+                          aria-label="file example"
+                          required
+                        />
+                        <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >شهادة التسجيل الضريبي<span>*</span></label
-                      >
-                      <input
-                        type="file"
-                        class="form-control chooseFile"
-                        aria-label="file example"
-                        required
-                      />
-                      <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >شهادة الغرفة التجارية<span>*</span></label
+                        >
+                        <input
+                          type="file"
+                          class="form-control chooseFile"
+                          aria-label="file example"
+                          required
+                        />
+                        <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >رخصة التشغيل<span>*</span></label
-                      >
-                      <input
-                        type="file"
-                        class="form-control chooseFile"
-                        aria-label="file example"
-                        required
-                      />
-                      <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                    <div class="col-md-4">
+                      <div class="mb-3">
+                        <label class="form-label"
+                          >صورة هوية المالك / المدير العام<span>*</span></label
+                        >
+                        <input
+                          type="file"
+                          class="form-control chooseFile"
+                          aria-label="file example"
+                          required
+                        />
+                        <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >شهادة الغرفة التجارية<span>*</span></label
-                      >
-                      <input
-                        type="file"
-                        class="form-control chooseFile"
-                        aria-label="file example"
-                        required
-                      />
-                      <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                    <div class="col-12 section-title-container">
+                      <h2 class="h6 section-title" id="seventhSectionTitle">
+                        التسهيلات االائتمانية المطلوبة
+                      </h2>
                     </div>
-                  </div>
 
-                  <div class="col-md-4">
-                    <div class="mb-3">
-                      <label class="form-label"
-                        >صورة هوية المالك / المدير العام<span>*</span></label
-                      >
-                      <input
-                        type="file"
-                        class="form-control chooseFile"
-                        aria-label="file example"
-                        required
-                      />
-                      <div class="invalid-feedback">ملف النموذج غير صالح</div>
+                    <h3 class="h6 text-decoration-underline fw-bold mt-2">
+                      السادة شركة زينة للغذاء للتجارة
+                    </h3>
+                    <p>
+                      نفيدكم بأننا نرغب في التعامل معكم بنظام الآجل، ونطلب منكم
+                      التكرم بالموافقة على فتح حساب جارٍ باسمنا بحد ائتمان قدره
+                    </p>
+
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="validationCreditLimit" class="form-label"
+                          >الحد الائتماني<span>*</span></label
+                        >
+                        <input
+                          name="Credit Limit"
+                          type="number"
+                          class="form-control"
+                          id="validationCreditLimit"
+                          placeholder="ريال سعودي"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-12 section-title-container">
-                    <h2 class="h6 section-title" id="seventhSectionTitle">
-                      التسهيلات االائتمانية المطلوبة
-                    </h2>
-                  </div>
-
-                  <h3 class="h6 text-decoration-underline fw-bold mt-2">
-                    السادة شركة زينة للغذاء للتجارة
-                  </h3>
-                  <p>
-                    نفيدكم بأننا نرغب في التعامل معكم بنظام الآجل، ونطلب منكم
-                    التكرم بالموافقة على فتح حساب جارٍ باسمنا بحد ائتمان قدره
-                  </p>
-
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="validationCreditLimit" class="form-label"
-                        >الحد الائتماني<span>*</span></label
-                      >
-                      <input
-                        name="Credit Limit"
-                        type="number"
-                        class="form-control"
-                        id="validationCreditLimit"
-                        placeholder="ريال سعودي"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <div class="mb-3">
+                        <label for="validationCreditTerm" class="form-label"
+                          >مدة الائتمان<span>*</span></label
+                        >
+                        <input
+                          name="Credit Term"
+                          type="text"
+                          class="form-control"
+                          id="validationCreditTerm"
+                          placeholder=""
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label for="validationCreditTerm" class="form-label"
-                        >مدة الائتمان<span>*</span></label
-                      >
-                      <input
-                        name="Credit Term"
-                        type="text"
-                        class="form-control"
-                        id="validationCreditTerm"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <div class="col-md-12">
+                      <div class="mb-3">
+                        <label
+                          for="validationCreditLimitWords"
+                          class="form-label"
+                          >الحد الائتماني كتابة<span>*</span></label
+                        >
+                        <input
+                          name="Credit Limit in Words"
+                          type="tetxt"
+                          class="form-control"
+                          id="validationCreditLimitWords"
+                          placeholder="ريال سعودي"
+                          value=""
+                          required
+                        />
+                        <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      </div>
                     </div>
-                  </div>
+                    <p>
+                      ونتعهد بموجب ذلك بتسديد المبالغ التي تستحق الدفع خلال فترة
+                      الائتمان المحددة من قبلكم من تاريخ استلام البضاعة. كما
+                      نتعهد بتسديد أية مبالغ تتجاوز حد الائتمان أو الوقت المسموح
+                      به فورًا. ويحق لكم مطالبتنا بسداد جميع المبالغ التي بذمتنا
+                      دفعة واحدة في حال عدم التزامنا بالسداد حسب الطريقة
+                      المذكورة أعلاه أو في حال توقف نشاطنا لأي سبب من الأسباب،
+                      وذلك بضماننا الشخصي إضافة إلى ضمان الشركة أو المؤسسة.
+                    </p>
 
-                  <div class="col-md-12">
-                    <div class="mb-3">
-                      <label for="validationCreditLimitWords" class="form-label"
-                        >الحد الائتماني كتابة<span>*</span></label
-                      >
-                      <input
-                        name="Credit Limit in Words"
-                        type="tetxt"
-                        class="form-control"
-                        id="validationCreditLimitWords"
-                        placeholder="ريال سعودي"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                    <p>
+                      ويعتبر توقيعنا أو توقيع أي موظف من موظفينا المذكورين أدناه
+                      أو غير المذكورين على أوامر الشراء أو الفواتير أو كشوف
+                      الحساب بمثابة إقرار منا بالالتزام بسداد القيمة. وعليه، فقد
+                      فوضنا السادة المذكورة أسماؤهم أدناه بتعميدكم بالطلبيات
+                      والتوقيع على أوامر الشراء أو الطلب عبر الهاتف أو البريد
+                      الإلكتروني، ومطابقة كشوف الحساب واستلام البضاعة الموردة من
+                      قبلكم
+                    </p>
+
+                    <div class="col-md-6">
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFirstAuthorizedPerson"
+                            class="form-label"
+                            >المفوض الأول<span>*</span></label
+                          >
+                          <input
+                            name="First Authorized Person"
+                            type="text"
+                            class="form-control"
+                            id="validationFirstAuthorizedPerson"
+                            placeholder="الإسم كامل"
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFirstAuthorizedPersonId"
+                            class="form-label"
+                            >رقم الهوية<span>*</span></label
+                          >
+                          <input
+                            name="First Authorized Person ID"
+                            type="number"
+                            class="form-control"
+                            id="validationFirstAuthorizedPersonId"
+                            placeholder="رقم الهوية"
+                            value=""
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationFirstAuthorizedPersonMobile"
+                            class="form-label"
+                            >رقم الجوال<span>*</span></label
+                          >
+                          <input
+                            name="First Authorized Person Mobile"
+                            type="tel"
+                            class="form-control"
+                            id="validationFirstAuthorizedPersonMobile"
+                            placeholder=""
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
-                  <p>
-                    ونتعهد بموجب ذلك بتسديد المبالغ التي تستحق الدفع خلال فترة
-                    الائتمان المحددة من قبلكم من تاريخ استلام البضاعة. كما نتعهد
-                    بتسديد أية مبالغ تتجاوز حد الائتمان أو الوقت المسموح به
-                    فورًا. ويحق لكم مطالبتنا بسداد جميع المبالغ التي بذمتنا دفعة
-                    واحدة في حال عدم التزامنا بالسداد حسب الطريقة المذكورة أعلاه
-                    أو في حال توقف نشاطنا لأي سبب من الأسباب، وذلك بضماننا
-                    الشخصي إضافة إلى ضمان الشركة أو المؤسسة.
-                  </p>
 
-                  <p>
-                    ويعتبر توقيعنا أو توقيع أي موظف من موظفينا المذكورين أدناه
-                    أو غير المذكورين على أوامر الشراء أو الفواتير أو كشوف الحساب
-                    بمثابة إقرار منا بالالتزام بسداد القيمة. وعليه، فقد فوضنا
-                    السادة المذكورة أسماؤهم أدناه بتعميدكم بالطلبيات والتوقيع
-                    على أوامر الشراء أو الطلب عبر الهاتف أو البريد الإلكتروني،
-                    ومطابقة كشوف الحساب واستلام البضاعة الموردة من قبلكم
-                  </p>
+                    <div class="col-md-6">
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationSecondAuthorizedPerson"
+                            class="form-label"
+                            >المفوض التاني<span>*</span></label
+                          >
+                          <input
+                            name="Second Authorized Person"
+                            type="text"
+                            class="form-control"
+                            id="validationSecondAuthorizedPerson"
+                            placeholder="الإسم كامل"
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                        </div>
+                      </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFirstAuthorizedPerson"
-                        class="form-label"
-                        >المفوض الأول<span>*</span></label
-                      >
-                      <input
-                        name="First Authorized Person"
-                        type="text"
-                        class="form-control"
-                        id="validationFirstAuthorizedPerson"
-                        placeholder="الإسم كامل"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذا الحقل مطلوب</div>
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationSecondAuthorizedPersonId"
+                            class="form-label"
+                            >رقم الهوية<span>*</span></label
+                          >
+                          <input
+                            name="Second Authorized Person ID"
+                            type="number"
+                            class="form-control"
+                            id="validationSecondAuthorizedPersonId"
+                            placeholder="رقم الهوية"
+                            value=""
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                        </div>
+                      </div>
+
+                      <div class="">
+                        <div class="mb-3">
+                          <label
+                            for="validationSecondAuthorizedPersonMobile"
+                            class="form-label"
+                            >رقم الجوال<span>*</span></label
+                          >
+                          <input
+                            name="Second Authorized Person Mobile"
+                            type="tel"
+                            class="form-control"
+                            id="validationSecondAuthorizedPersonMobile"
+                            placeholder=""
+                            value=""
+                            required
+                          />
+                          <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                        </div>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationSecondAuthorizedPerson"
-                        class="form-label"
-                        >المفوض التاني<span>*</span></label
-                      >
-                      <input
-                        name="Second Authorized Person"
-                        type="text"
-                        class="form-control"
-                        id="validationSecondAuthorizedPerson"
-                        placeholder="الإسم كامل"
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                    <p>
+                      وفي حالة إلغاء تفويض أحدهم، نتعهد لكم بإبلاغكم خطيًا بذلك
+                      وإشعاركم باسم من سيحل محله بالتوقيع، ونتحمل مسؤولية ما
+                      يترتب على التراخي من قبلنا في إخطاركم. يلتزم صاحب الحساب
+                      بسداد قيمة جميع الفواتير المختومة بختم الشركة أو المنشأة
+                      أو الموقعة من أحد منسوبيها على فاتورة موجهة من الشركة إلى
+                      صاحب الحساب، بمثابة استلام صاحب الحساب للبضاعة وقبوله
+                      بالسعر الوارد بها وصحة الأصناف والكميات، بغض النظر عمن قام
+                      بالاستلام.
+                    </p>
+
+                    <div class="col-12 section-title-container">
+                      <h2 class="h6 section-title" id="seventhSectionTitle">
+                        بنود الإتفاقية
+                      </h2>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFirstAuthorizedPersonId"
-                        class="form-label"
-                        >رقم الهوية<span>*</span></label
-                      >
-                      <input
-                        name="First Authorized Person ID"
-                        type="number"
-                        class="form-control"
-                        id="validationFirstAuthorizedPersonId"
-                        placeholder="رقم الهوية"
-                        value=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <ul class="list-unstyled p-0 terms">
+                        1-في هذه الاتفاقية، وما لم يقتضِ السياق معنى آخر، فإن
+                        الجمل والكلمات التالية تحمل المعاني الواردة قرين كل
+                        منها:
+                        <li class="list-unstyled">
+                          أ)<span>الشركة :</span>شركة زينة الغذاء للتجارة.
+                        </li>
+                        <li class="list-unstyled">
+                          ب)<span>الحساب :</span>شركة زينة الغذاء للتجارة.
+                        </li>
+                        <li class="list-unstyled">
+                          ج)صاحب الحساب هو العميل. المفوض هو الشخص أو الأشخاص
+                          المفوضين من قبل صاحب الحساب للقيام بعمل معين نيابة
+                          عنه.
+                        </li>
+                        <li class="list-unstyled">
+                          د)<span>حد الائتمان :</span>هو المبلغ المسموح به لصاحب
+                          الحساب أن يدين به للشركة متى شاءت.
+                        </li>
+                        <li class="list-unstyled">
+                          هـ)<span>فترة الائتمان :</span>هي المدة التي يجب على
+                          صاحب الحساب تسديد كامل قيمة مسحوباته الشهرية خلالها.
+                        </li>
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        2-تقوم الشركة بإرسال كشف حساب شهري إلى صاحب الحساب
+                        ورقيًا أو عن طريق البريد الإلكتروني الخاص به للمراسلات
+                        والمبين في الاتفاقية. ويجب على صاحب الحساب مراجعة الكشف
+                        وإبلاغ الشركة في حال وجود أي اعتراض خلال أسبوع واحد من
+                        تاريخ إرسال الكشف، وإلا يعتبر الكشف صحيحًا وساري
+                        المفعول.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        3-يحق للشركة في أي وقت وبدون إبداء أسباب وقف العمل بهذه
+                        الاتفاقية، وعلى صاحب الحساب تسديد كامل المبالغ المستحقة
+                        في ذمته خلال 7 أيام من تاريخ إشعاره بذلك عبر البريد
+                        الإلكتروني المخصص للمراسلات.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        4-إن المفوضين أو أحد موظفي صاحب الحساب بالشراء
+                        والاستلام، سواء بموجب هذه الاتفاقية أو بأي مستند آخر،
+                        سواء كان ذلك بصفة مستمرة أو لمرة واحدة، وسواء ورد
+                        تفويضهم بطلب الشراء أو بصفة مستقلة، فإن توقيعهم على
+                        الفاتورة بالاستلام يعد موافقة نهائية من صاحب الحساب على
+                        صحة الكميات المستلمة وقيمتها ووزنها وحجمها ونوعها.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        5-بغض النظر عن أية معلومات مضادة ترد في أي إعلان عام أو
+                        في السجل التجاري لصاحب الحساب، فإن للشركة حق اعتماد
+                        التعليمات الخاصة بالمفوضين بالتوقيع، وذلك إلى حين
+                        استلامها إشعارًا خطيًا من صاحب الحساب بإلغاء تلك
+                        التعليمات.
+                      </ul>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationSecondAuthorizedPersonId"
-                        class="form-label"
-                        >رقم الهوية<span>*</span></label
-                      >
-                      <input
-                        name="Second Authorized Person ID"
-                        type="number"
-                        class="form-control"
-                        id="validationSecondAuthorizedPersonId"
-                        placeholder="رقم الهوية"
-                        value=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                    <div class="col-md-6">
+                      <ul class="list-unstyled p-0">
+                        6-على صاحب الحساب إشعار الشركة خطيًا بأي تعديل أو تغيير
+                        يطرأ على الكيان القانوني له، بما في ذلك التنازل عن
+                        المنشأة. ولا يسري أي تعديل أو تغيير في حق الشركة ما لم
+                        يتم إشعارها به رسميًا. وفي حال عدم إشعار الشركة بذلك،
+                        فإن صاحب الحساب يتحمل كامل المسؤولية عن المديونيات
+                        المترتبة على المنشأة ويلتزم بسدادها.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        7-تكون هذه الاتفاقية سارية لمدة غير محددة، وتلغي أي
+                        اتفاقيات أخرى سابقة قائمة مع شركة زينة الغذاء للتجارة
+                        لنفس الموضوع، اعتبارًا من تاريخ التوقيع عليها. وفي حال
+                        رغبة أحد الطرفين في الإلغاء أو إيقاف العمل بها، يتم
+                        إشعار الطرف الآخر بخطاب رسمي موثق من الغرفة التجارية.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        8-عند الانقطاع عن دفع المبالغ المستحقة لشركة زينة الغذاء
+                        للتجارة، حسب الاتفاق، يحق للشركة اللجوء للجهات الرسمية
+                        للمطالبة بكامل مستحقاتها مع غرامات التأخير المقررة.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        9-التوقيع على هذه الاتفاقية هو إقرار ضمني بالموافقة غير
+                        المشروطة وغير القابلة للإلغاء بتسديد جميع الفواتير
+                        الخاصة بشركة زينة الغذاء للتجارة بكامل قيمتها دون تحفظ
+                        خلال المدة المحددة، وأن جميع المعلومات المدرجة صحيحة.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        10-أي فاتورة يتم استلامها، فإن جميع الأسعار الواردة بها
+                        تكون مقبولة لدينا، ونلتزم بسداد قيمة جميع الفواتير حسب
+                        الأسعار الواردة بها.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        11-لشركة زينة الغذاء للتجارة الحق في تعديل أسعار البيع
+                        في أي وقت دون إلزام عليها بإخطارنا بذلك التعديل، ونقر
+                        بأن جميع الفواتير التي تم استلامها صحيحة حسب الأسعار
+                        الواردة بها.
+                      </ul>
+
+                      <ul class="list-unstyled p-0">
+                        12-يخضع هذا الاتفاق للأنظمة والقوانين المعمول بها في
+                        المملكة العربية السعودية، وفي حال نشوء أو وجود أي نزاع،
+                        يتم حله وديًا بين الطرفين، وإذا تعذر الحل، يحال هذا
+                        النزاع للمحكمة المختصة في الرياض.
+                      </ul>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationFirstAuthorizedPersonMobile"
-                        class="form-label"
-                        >رقم الجوال<span>*</span></label
-                      >
-                      <input
-                        name="First Authorized Person Mobile"
-                        type="tel"
-                        class="form-control"
-                        id="validationFirstAuthorizedPersonMobile"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                    <h3 class="h6 text-decoration-underline fw-bold">
+                      التعهد الشخصي
+                    </h3>
+                    <p>
+                      أتعهد بأنني أتحمل كامل المسؤولية وملتزم التزامًا كاملاً
+                      بسداد جميع المبالغ المترتبة علي من ذمتي الخاصة والتي تخص
+                      الديون المستحقة من صاحب الحساب لصالح شركة زينة الغذاء
+                      للتجارة في حالة مواجهتها أية مصاعب تؤثر على استمرارية
+                      العمل أو في حالة البيع أو الإغلاق. وأتعهد، مع تحملي لكل ما
+                      يعنيه هذا التعهد، بأنه في حالة مواجهة أي ظروف طارئة أو بيع
+                      أو إغلاق، يجب إشعار شركة زينة الغذاء للتجارة قبل ذلك بفترة
+                      كافية لا تقل عن شهرين من تاريخ وقوع الحدث، مع عدم اعتبار
+                      الإعلان بالجريدة إخلالًا من طرفنا. ولا يحق لي، بأي حال من
+                      الأحوال، تجيير الدين المستحق علي إلى المالك الجديد في حال
+                      البيع إلا بموافقة خطية من شركة زينة الغذاء للتجارة، مع
+                      تعهدي بأنه في حال عدم التزام المالك الجديد بالتسديد، فإنني
+                      أتحمل كامل المسؤولية عن الدين الآجل على المالك الجديد. أقر
+                      أنا الموقع أدناه بأنني قبلت بهذه الاتفاقية بعد أن قرأت
+                      بنودها وعلمت بما تضمنته من شروط وأحكام، علمًا نافيًا
+                      للجهالة شرعًا.
+                    </p>
+
+                    <div class="col-md-6">
+                      <p class="col-12 fw-bold h6">
+                        أقر بصحة البيانات والمستندات وأتعهد بتنفيذ جميع شروط
+                        التعامل وعليه جرى التوقيع:
+                      </p>
+                      <div class="row">
+                        <p class="col-6">الإسم:</p>
+                        <p class="col-6">التوقيع:</p>
+                      </div>
                     </div>
-                  </div>
 
-                  <div class="col-md-6">
-                    <div class="mb-3">
-                      <label
-                        for="validationSecondAuthorizedPersonMobile"
-                        class="form-label"
-                        >رقم الجوال<span>*</span></label
-                      >
-                      <input
-                        name="Second Authorized Person Mobile"
-                        type="tel"
-                        class="form-control"
-                        id="validationSecondAuthorizedPersonMobile"
-                        placeholder=""
-                        value=""
-                        required
-                      />
-                      <div class="invalid-feedback">هذاالحقل مطلوب</div>
+                    <div class="col-md-6 row">
+                      <div class="col-7 text-center">
+                        <div class="certification"></div>
+                        <p class="fw-bold h6">تصديق الغرفة التجارية</p>
+                      </div>
+                      <div class="col-5 text-center">
+                        <div class="stamp"></div>
+                        <p class="fw-bold h6">ختم الشركة / المؤسسة</p>
+                      </div>
                     </div>
-                  </div>
-
-                  <p>
-                    وفي حالة إلغاء تفويض أحدهم، نتعهد لكم بإبلاغكم خطيًا بذلك
-                    وإشعاركم باسم من سيحل محله بالتوقيع، ونتحمل مسؤولية ما يترتب
-                    على التراخي من قبلنا في إخطاركم. يلتزم صاحب الحساب بسداد
-                    قيمة جميع الفواتير المختومة بختم الشركة أو المنشأة أو
-                    الموقعة من أحد منسوبيها على فاتورة موجهة من الشركة إلى صاحب
-                    الحساب، بمثابة استلام صاحب الحساب للبضاعة وقبوله بالسعر
-                    الوارد بها وصحة الأصناف والكميات، بغض النظر عمن قام
-                    بالاستلام.
-                  </p>
-
-                  <div class="col-12 section-title-container">
-                    <h2 class="h6 section-title" id="seventhSectionTitle">
-                      بنود الإتفاقية
-                    </h2>
-                  </div>
-
-                  <div class="col-md-6">
-                    <ul class="list-unstyled p-0 terms">
-                      1-في هذه الاتفاقية، وما لم يقتضِ السياق معنى آخر، فإن
-                      الجمل والكلمات التالية تحمل المعاني الواردة قرين كل منها:
-                      <li class="list-unstyled">
-                        أ)<span>الشركة :</span>شركة زينة الغذاء للتجارة.
-                      </li>
-                      <li class="list-unstyled">
-                        ب)<span>الحساب :</span>شركة زينة الغذاء للتجارة.
-                      </li>
-                      <li class="list-unstyled">
-                        ج)صاحب الحساب هو العميل. المفوض هو الشخص أو الأشخاص
-                        المفوضين من قبل صاحب الحساب للقيام بعمل معين نيابة عنه.
-                      </li>
-                      <li class="list-unstyled">
-                        د)<span>حد الائتمان :</span>هو المبلغ المسموح به لصاحب
-                        الحساب أن يدين به للشركة متى شاءت.
-                      </li>
-                      <li class="list-unstyled">
-                        هـ)<span>فترة الائتمان :</span>هي المدة التي يجب على
-                        صاحب الحساب تسديد كامل قيمة مسحوباته الشهرية خلالها.
-                      </li>
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      2-تقوم الشركة بإرسال كشف حساب شهري إلى صاحب الحساب ورقيًا
-                      أو عن طريق البريد الإلكتروني الخاص به للمراسلات والمبين في
-                      الاتفاقية. ويجب على صاحب الحساب مراجعة الكشف وإبلاغ الشركة
-                      في حال وجود أي اعتراض خلال أسبوع واحد من تاريخ إرسال
-                      الكشف، وإلا يعتبر الكشف صحيحًا وساري المفعول.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      3-يحق للشركة في أي وقت وبدون إبداء أسباب وقف العمل بهذه
-                      الاتفاقية، وعلى صاحب الحساب تسديد كامل المبالغ المستحقة في
-                      ذمته خلال 7 أيام من تاريخ إشعاره بذلك عبر البريد
-                      الإلكتروني المخصص للمراسلات.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      4-إن المفوضين أو أحد موظفي صاحب الحساب بالشراء والاستلام،
-                      سواء بموجب هذه الاتفاقية أو بأي مستند آخر، سواء كان ذلك
-                      بصفة مستمرة أو لمرة واحدة، وسواء ورد تفويضهم بطلب الشراء
-                      أو بصفة مستقلة، فإن توقيعهم على الفاتورة بالاستلام يعد
-                      موافقة نهائية من صاحب الحساب على صحة الكميات المستلمة
-                      وقيمتها ووزنها وحجمها ونوعها.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      5-بغض النظر عن أية معلومات مضادة ترد في أي إعلان عام أو في
-                      السجل التجاري لصاحب الحساب، فإن للشركة حق اعتماد التعليمات
-                      الخاصة بالمفوضين بالتوقيع، وذلك إلى حين استلامها إشعارًا
-                      خطيًا من صاحب الحساب بإلغاء تلك التعليمات.
-                    </ul>
-                  </div>
-
-                  <div class="col-md-6">
-                    <ul class="list-unstyled p-0">
-                      6-على صاحب الحساب إشعار الشركة خطيًا بأي تعديل أو تغيير
-                      يطرأ على الكيان القانوني له، بما في ذلك التنازل عن
-                      المنشأة. ولا يسري أي تعديل أو تغيير في حق الشركة ما لم يتم
-                      إشعارها به رسميًا. وفي حال عدم إشعار الشركة بذلك، فإن صاحب
-                      الحساب يتحمل كامل المسؤولية عن المديونيات المترتبة على
-                      المنشأة ويلتزم بسدادها.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      7-تكون هذه الاتفاقية سارية لمدة غير محددة، وتلغي أي
-                      اتفاقيات أخرى سابقة قائمة مع شركة زينة الغذاء للتجارة لنفس
-                      الموضوع، اعتبارًا من تاريخ التوقيع عليها. وفي حال رغبة أحد
-                      الطرفين في الإلغاء أو إيقاف العمل بها، يتم إشعار الطرف
-                      الآخر بخطاب رسمي موثق من الغرفة التجارية.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      8-عند الانقطاع عن دفع المبالغ المستحقة لشركة زينة الغذاء
-                      للتجارة، حسب الاتفاق، يحق للشركة اللجوء للجهات الرسمية
-                      للمطالبة بكامل مستحقاتها مع غرامات التأخير المقررة.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      9-التوقيع على هذه الاتفاقية هو إقرار ضمني بالموافقة غير
-                      المشروطة وغير القابلة للإلغاء بتسديد جميع الفواتير الخاصة
-                      بشركة زينة الغذاء للتجارة بكامل قيمتها دون تحفظ خلال المدة
-                      المحددة، وأن جميع المعلومات المدرجة صحيحة.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      10-أي فاتورة يتم استلامها، فإن جميع الأسعار الواردة بها
-                      تكون مقبولة لدينا، ونلتزم بسداد قيمة جميع الفواتير حسب
-                      الأسعار الواردة بها.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      11-لشركة زينة الغذاء للتجارة الحق في تعديل أسعار البيع في
-                      أي وقت دون إلزام عليها بإخطارنا بذلك التعديل، ونقر بأن
-                      جميع الفواتير التي تم استلامها صحيحة حسب الأسعار الواردة
-                      بها.
-                    </ul>
-
-                    <ul class="list-unstyled p-0">
-                      12-يخضع هذا الاتفاق للأنظمة والقوانين المعمول بها في
-                      المملكة العربية السعودية، وفي حال نشوء أو وجود أي نزاع،
-                      يتم حله وديًا بين الطرفين، وإذا تعذر الحل، يحال هذا النزاع
-                      للمحكمة المختصة في الرياض.
-                    </ul>
-                  </div>
-
-                  <h3 class="h6 text-decoration-underline fw-bold">التعهد الشخصي</h3>
-                  <p>
-                    أتعهد بأنني أتحمل كامل المسؤولية وملتزم التزامًا كاملاً
-                    بسداد جميع المبالغ المترتبة علي من ذمتي الخاصة والتي تخص
-                    الديون المستحقة من صاحب الحساب لصالح شركة زينة الغذاء
-                    للتجارة في حالة مواجهتها أية مصاعب تؤثر على استمرارية العمل
-                    أو في حالة البيع أو الإغلاق. وأتعهد، مع تحملي لكل ما يعنيه
-                    هذا التعهد، بأنه في حالة مواجهة أي ظروف طارئة أو بيع أو
-                    إغلاق، يجب إشعار شركة زينة الغذاء للتجارة قبل ذلك بفترة
-                    كافية لا تقل عن شهرين من تاريخ وقوع الحدث، مع عدم اعتبار
-                    الإعلان بالجريدة إخلالًا من طرفنا. ولا يحق لي، بأي حال من
-                    الأحوال، تجيير الدين المستحق علي إلى المالك الجديد في حال
-                    البيع إلا بموافقة خطية من شركة زينة الغذاء للتجارة، مع تعهدي
-                    بأنه في حال عدم التزام المالك الجديد بالتسديد، فإنني أتحمل
-                    كامل المسؤولية عن الدين الآجل على المالك الجديد. أقر أنا
-                    الموقع أدناه بأنني قبلت بهذه الاتفاقية بعد أن قرأت بنودها
-                    وعلمت بما تضمنته من شروط وأحكام، علمًا نافيًا للجهالة شرعًا.
-                  </p>
-
-                  <div class="col-md-6">
-                    <p class="col-12 fw-bold h6">أقر بصحة البيانات والمستندات وأتعهد بتنفيذ جميع شروط التعامل وعليه جرى التوقيع:</p>
-                    <div class="row">
-                      <p class="col-6">الإسم:</p>
-                      <p class="col-6">التوقيع:</p>
+                    <div class="col-12 mt-4 text-center">
+                      <a
+                      href="https://selectpdf.com/export-to-pdf/?"                        class="btn btn-primary w-75"
+                        type="submit"
+                        id="submit"
+                        onclick="window.print()">
+                        Save Form
+                      </a>
                     </div>
-                  </div>
-
-                  <div class="col-md-6 row">
-                    <div class="col-7 text-center">
-                      <div class="certification"></div>
-                      <p class="fw-bold h6">تصديق الغرفة التجارية</p>
-                    </div>
-                    <div class="col-5 text-center">
-                      <div class="stamp"></div>
-                      <p class="fw-bold h6">ختم الشركة / المؤسسة</p>
-                    </div>
-                  </div>
-                  <div class="col-12 mt-4">
-                    <button
-                      class="btn btn-primary w-100"
-                      type="submit"
-                      id="submit"
-                    >
-                      Submit Form
-                    </button>
-                  </div>
-                  <div id="result"></div>
-                </form>
+                    <div id="result"></div>
+                  </form>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-    </main>
-    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-    <script src="js/index.js"></script>
+        </section>
+      </main>
+      <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+      <script src="js/index.js"></script>
+    </div>
   </body>
 </html>
