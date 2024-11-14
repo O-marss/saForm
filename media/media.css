@@ -1,17 +1,16 @@
-@media (min-width: 768px) {
+@media (min-width: 576px) {
     .main-header{
         margin-top: 0.3125rem;
         font-size: 0.875rem;
     }
 
     .main-date{
-        margin-top: 0.3125rem;
         font-size: 0.875rem;
     }
 }
-  @media (min-width: 992px) {
+  @media (min-width: 768px) {
     .logo-shape{
-         top: -120px;
+         top: -100px;
          right: -90px;
      }
      .main-header{
