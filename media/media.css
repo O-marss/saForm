@@ -1,18 +1,11 @@
-@media (min-width: 576px) {
-    .main-header{
-        margin-top: 0.3125rem;
-        font-size: 0.875rem;
+
+
+  @media (min-width: 768px) {
+ 
+    .logo-img{
+        width: 500px;
     }
 
-    .main-date{
-        font-size: 0.875rem;
-    }
-}
-  @media (min-width: 768px) {
-    .logo-shape{
-         top: -100px;
-         right: -90px;
-     }
      .main-header{
         font-size: 2rem;
     }
@@ -21,3 +14,17 @@
         font-size: 1.25rem;
     }
   }
+
+
+  @media (min-width: 992px) {
+
+    .main-date{
+        font-size: 1.25rem;
+        margin-left: 30px;
+    }
+
+}
+
+
+  @media (min-width: 1200px) {
+ }

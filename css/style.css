@@ -24,12 +24,25 @@ header h1{
     font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
 }
 
-.logo-shape{
-     position: relative;
-    top: -40px;
-    right: -50px;
-    z-index: -1;
+.logo{
+    position: relative;
+   
+} 
+
+.logo-img{ 
+    width: 300px;
 }
+
+.main-header{
+    margin-top: 0.3125rem;
+    font-size: 1.4375rem;
+}
+
+.main-date{
+    font-size: 0.875rem;
+    margin: 10px 0 0 0;
+}
+
 
 label{
     width: fit-content;
