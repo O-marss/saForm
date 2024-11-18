@@ -5,12 +5,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Zeina Form</title>
-   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="media/media.css">
   </head>
   <body>
-    <div class="container border-1 border-black border overflow-x-hidden">
+    <div id="omar"  class="container border-1 border-black border overflow-x-hidden">
       <header >
         <div class="container">
           <div class="logo d-flex justify-content-center align-items-center">
@@ -1202,7 +1203,7 @@
                       <button
                       class="btn btn-primary w-75"
                         type="submit"
-                        id="submit"
+                        id="download"
                         >
                         Save Form
                       </button>
@@ -1214,8 +1215,8 @@
           </div>
         </section>
       </main>
-      <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
-      <script src="js/index.js"></script>
     </div>
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="js/index.js"></script>
   </body>
 </html>
