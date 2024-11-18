@@ -36,69 +36,129 @@
 //         format: [210, 270], // width x height (e.g., custom height for taller pages)
 //       });
 //       // Add the image to the PDF
-//       pdf.addImage(imgData, 'JPEG', 10, 10, 190, 0); // 190 is for A4 width, adjust as needed
+//       pdf.addImage(imgData, 'JPEG', 0, 0, 210, 0); // 190 is for A4 width, adjust as needed
 //       pdf.save('example.pdf'); // Download the PDF
 //     });
 //   });
 // }
 
 
+// function downloadPdf() {
+//   document.getElementById('download').addEventListener('click', async () => {
+//     const { jsPDF } = window.jspdf;
+
+//     const pdf = new jsPDF({
+//               orientation: "portrait", // or 'landscape'
+//               unit: "mm", // measurement units: 'mm', 'cm', 'pt', or 'in'
+//               hotfixes: ["px_scaling"]
+//             });
+//         pdf.hotfix.fill_close = true;
+
+//     const pageWidth = pdf.internal.pageSize.getWidth();
+//     const pageHeight = pdf.internal.pageSize.getHeight();
+//     const margin = 0; // 10mm margin on all sides
+//     const contentHeight = pageHeight - 2 * margin; // Available height for content
+
+//     const content = document.getElementById('pageContainer');
+//     const canvas = await html2canvas(content, { scale: 2 });
+
+//     const imgWidth = pageWidth - 2 * margin;
+//     const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+//     let position = 0;
+
+//     while (position < canvas.height) {
+//         const croppedCanvas = document.createElement('canvas');
+//         const croppedHeight = Math.min(canvas.height - position, contentHeight * canvas.width / pageWidth);
+
+//         croppedCanvas.width = canvas.width;
+//         croppedCanvas.height = croppedHeight;
+
+//         const ctx = croppedCanvas.getContext('2d');
+//         ctx.drawImage(
+//             canvas,
+//             0,
+//             position,
+//             canvas.width,
+//             croppedHeight,
+//             0,
+//             0,
+//             canvas.width,
+//             croppedHeight
+//         );
+
+//         const imgData = croppedCanvas.toDataURL('image/jpeg');
+
+//         if (position > 0) {
+//             pdf.addPage();
+//         }
+
+//         pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, (imgWidth / canvas.width) * croppedHeight);
+
+//         position += croppedHeight;
+//     }
+
+//     pdf.save('document.pdf');
+// });
+
+// }
 function downloadPdf() {
   document.getElementById('download').addEventListener('click', async () => {
     const { jsPDF } = window.jspdf;
 
     const pdf = new jsPDF({
-              orientation: "portrait", // or 'landscape'
-              unit: "mm", // measurement units: 'mm', 'cm', 'pt', or 'in'
-              hotfixes: ["px_scaling"]
-            });
+      orientation: "portrait", // or 'landscape'
+      unit: "mm", // measurement units: 'mm', 'cm', 'pt', or 'in'
+      hotfixes: ["px_scaling"]
+    });
+
     const pageWidth = pdf.internal.pageSize.getWidth();
     const pageHeight = pdf.internal.pageSize.getHeight();
     const margin = 0; // 10mm margin on all sides
     const contentHeight = pageHeight - 2 * margin; // Available height for content
 
     const content = document.getElementById('pageContainer');
-    const canvas = await html2canvas(content, { scale: 2 });
+    const canvas = await html2canvas(content, { scale: 2 }); // Scale content for high DPI
 
     const imgWidth = pageWidth - 2 * margin;
-    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Scale the height to maintain aspect ratio
 
     let position = 0;
 
     while (position < canvas.height) {
-        const croppedCanvas = document.createElement('canvas');
-        const croppedHeight = Math.min(canvas.height - position, contentHeight * canvas.width / pageWidth);
+      const croppedCanvas = document.createElement('canvas');
+      const croppedHeight = Math.min(canvas.height - position, contentHeight * canvas.width / pageWidth);
 
-        croppedCanvas.width = canvas.width;
-        croppedCanvas.height = croppedHeight;
+      croppedCanvas.width = canvas.width;
+      croppedCanvas.height = croppedHeight;
 
-        const ctx = croppedCanvas.getContext('2d');
-        ctx.drawImage(
-            canvas,
-            0,
-            position,
-            canvas.width,
-            croppedHeight,
-            0,
-            0,
-            canvas.width,
-            croppedHeight
-        );
+      const ctx = croppedCanvas.getContext('2d');
+      ctx.drawImage(
+        canvas,
+        0,
+        position,
+        canvas.width,
+        croppedHeight,
+        0,
+        0,
+        canvas.width,
+        croppedHeight
+      );
 
-        const imgData = croppedCanvas.toDataURL('image/jpeg');
+      const imgData = croppedCanvas.toDataURL('image/jpeg');
 
-        if (position > 0) {
-            pdf.addPage();
-        }
+      if (position > 0) {
+        pdf.addPage(); // Add new page if not the first
+      }
 
-        pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, (imgWidth / canvas.width) * croppedHeight);
+      pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, (imgWidth / canvas.width) * croppedHeight);
 
-        position += croppedHeight;
+      position += croppedHeight; // Move to next part of the content
     }
 
     pdf.save('document.pdf');
-});
-
+  });
 }
+
 downloadPdf()
 
