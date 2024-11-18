@@ -37,7 +37,7 @@ function downloadPdf(){
     const imgData = canvas.toDataURL('image/jpeg', 1); // Convert canvas to image
     const imgWidth = 210; // Width of the image in the PDF (A4 minus margins)
     const pageHeight = 297; // Height of an A4 page in mm
-    const imgHeight = ((canvas.height + 700) * imgWidth) / canvas.width; // Maintain aspect ratio
+    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Maintain aspect ratio
     let heightLeft = imgHeight; // Total image height remaining to render
 
     const pdf = new jsPDF({
@@ -61,7 +61,7 @@ function downloadPdf(){
     }
 
     // Save the PDF
-    pdf.save('example.pdf'); // Download the PDF
+    pdf.save('Contract.pdf'); // Download the PDF
   }).catch(error => {
     console.error('Error generating PDF:', error);
   });
