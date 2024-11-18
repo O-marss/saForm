@@ -1,5 +1,6 @@
 *{
-    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+            box-sizing: border-box;
 }
 
 body{
@@ -45,6 +46,8 @@ header h1{
 
 
 label{
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
     width: fit-content;
 }
 
@@ -80,7 +83,8 @@ label{
 
 .form-control:focus{
     border-color: #4B4376;
-    box-shadow: 0 0 0 .25rem #4b437652;
+    -webkit-box-shadow: 0 0 0 .25rem #4b437652;
+            box-shadow: 0 0 0 .25rem #4b437652;
 }
 
 #form-container form input .in
@@ -123,17 +127,16 @@ label{
     border: 1px solid grey;
 }
 
-
-
-
-/* CSS */
 #download {
-  appearance: button;
+  -webkit-appearance: button;
+     -moz-appearance: button;
+          appearance: button;
   background-color: #1899D6;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   color: #FFFFFF;
   cursor: pointer;
   display: inline-block;
@@ -148,10 +151,18 @@ label{
   padding: 13px 16px;
   text-align: center;
   text-transform: uppercase;
-  touch-action: manipulation;
-  transform: translateZ(0);
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: -webkit-filter .2s;
+  transition: -webkit-filter .2s;
+  -o-transition: filter .2s;
   transition: filter .2s;
-  user-select: none;
+  transition: filter .2s, -webkit-filter .2s;
+  -moz-user-select: none;
+   -ms-user-select: none;
+       user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -175,7 +186,10 @@ label{
 
 #download,
 #download:focus {
-  user-select: auto;
+  -webkit-user-select: auto;
+     -moz-user-select: auto;
+      -ms-user-select: auto;
+          user-select: auto;
 }
 
 #download:hover:not(:disabled) {
