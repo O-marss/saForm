@@ -54,7 +54,7 @@ function downloadPdf(){
 
     // Add additional pages if content exceeds one page
     while (heightLeft > 0) {
-      position = heightLeft - imgHeight; // Move to next page
+      position -= pageHeight; 
       pdf.addPage();
       pdf.addImage(imgData, 'JPEG', 0, position , imgWidth, imgHeight);
       heightLeft -= pageHeight;
