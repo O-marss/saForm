@@ -14,6 +14,7 @@
           event.stopPropagation();
         } else {
           event.preventDefault(); // Prevent form submission
+          downloadPdf() 
         }
         form.classList.add("was-validated");
       },
@@ -21,6 +22,65 @@
     );
   });
 })();
+
+
+function downloadPdf() {
+  document.getElementById('download').addEventListener('click', async () => {
+    const { jsPDF } = window.jspdf;
+
+    const pdf = new jsPDF({
+              orientation: "portrait", // or 'landscape'
+              unit: "mm", // measurement units: 'mm', 'cm', 'pt', or 'in'
+              hotfixes: ["px_scaling"]
+            });
+            
+    const pageWidth = pdf.internal.pageSize.getWidth();
+    const pageHeight = pdf.internal.pageSize.getHeight();
+    const margin = 0; // 10mm margin on all sides
+    const contentHeight = pageHeight - 2 * margin; // Available height for content
+
+    const content = document.getElementById('pageContainer');
+    const canvas = await html2canvas(content, { scale: 2 });
+
+    const imgWidth = pageWidth - 2 * margin;
+    const imgHeight = (canvas.height * imgWidth) / canvas.width;
+
+    let position = 0;
+
+    while (position < canvas.height) {
+        const croppedCanvas = document.createElement('canvas');
+        const croppedHeight = Math.min(canvas.height - position, contentHeight * canvas.width / pageWidth);
+
+        croppedCanvas.width = canvas.width;
+        croppedCanvas.height = croppedHeight;
+
+        const ctx = croppedCanvas.getContext('2d');
+        ctx.drawImage(
+            canvas,
+            0,
+            position,
+            canvas.width,
+            croppedHeight,
+            0,
+            0,
+            canvas.width,
+            croppedHeight
+        );
+
+        const imgData = croppedCanvas.toDataURL('image/jpeg');
+
+        if (position > 0) {
+            pdf.addPage();
+        }
+
+        pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, (imgWidth / canvas.width) * croppedHeight);
+
+        position += croppedHeight;
+    }
+
+    pdf.save('document.pdf');
+});
+}
 
 // function downloadPdf(){
 //   document.getElementById('download').addEventListener('click', () => {
@@ -41,159 +101,3 @@
 //     });
 //   });
 // }
-
-
-// function downloadPdf() {
-//   document.getElementById('download').addEventListener('click', async () => {
-//     const { jsPDF } = window.jspdf;
-
-//     const pdf = new jsPDF({
-//               orientation: "portrait", // or 'landscape'
-//               unit: "mm", // measurement units: 'mm', 'cm', 'pt', or 'in'
-//               hotfixes: ["px_scaling"]
-//             });
-//         pdf.hotfix.fill_close = true;
-
-//     const pageWidth = pdf.internal.pageSize.getWidth();
-//     const pageHeight = pdf.internal.pageSize.getHeight();
-//     const margin = 0; // 10mm margin on all sides
-//     const contentHeight = pageHeight - 2 * margin; // Available height for content
-
-//     const content = document.getElementById('pageContainer');
-//     const canvas = await html2canvas(content, { scale: 2 });
-
-//     const imgWidth = pageWidth - 2 * margin;
-//     const imgHeight = (canvas.height * imgWidth) / canvas.width;
-
-//     let position = 0;
-
-//     while (position < canvas.height) {
-//         const croppedCanvas = document.createElement('canvas');
-//         const croppedHeight = Math.min(canvas.height - position, contentHeight * canvas.width / pageWidth);
-
-//         croppedCanvas.width = canvas.width;
-//         croppedCanvas.height = croppedHeight;
-
-//         const ctx = croppedCanvas.getContext('2d');
-//         ctx.drawImage(
-//             canvas,
-//             0,
-//             position,
-//             canvas.width,
-//             croppedHeight,
-//             0,
-//             0,
-//             canvas.width,
-//             croppedHeight
-//         );
-
-//         const imgData = croppedCanvas.toDataURL('image/jpeg');
-
-//         if (position > 0) {
-//             pdf.addPage();
-//         }
-
-//         pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, (imgWidth / canvas.width) * croppedHeight);
-
-//         position += croppedHeight;
-//     }
-
-//     pdf.save('document.pdf');
-// });
-
-// }
-// function downloadPdf() {
-//   document.getElementById('download').addEventListener('click', async () => {
-//     const { jsPDF } = window.jspdf;
-
-//     const pdf = new jsPDF({
-//       orientation: "portrait", // or 'landscape'
-//       unit: "mm", // measurement units: 'mm', 'cm', 'pt', or 'in'
-//       hotfixes: ["px_scaling"]
-//     });
-
-//     const pageWidth = pdf.internal.pageSize.getWidth();
-//     const pageHeight = pdf.internal.pageSize.getHeight();
-//     const margin = 0; // 10mm margin on all sides
-//     const contentHeight = pageHeight - 2 * margin; // Available height for content
-
-//     const content = document.getElementById('pageContainer');
-//     const canvas = await html2canvas(content, { scale: 2 }); // Scale content for high DPI
-
-//     const imgWidth = pageWidth - 2 * margin;
-//     const imgHeight = (canvas.height * imgWidth) / canvas.width; // Scale the height to maintain aspect ratio
-
-//     let position = 0;
-
-//     while (position < canvas.height) {
-//       const croppedCanvas = document.createElement('canvas');
-//       const croppedHeight = Math.min(canvas.height - position, contentHeight * canvas.width / pageWidth);
-
-//       croppedCanvas.width = canvas.width;
-//       croppedCanvas.height = croppedHeight;
-
-//       const ctx = croppedCanvas.getContext('2d');
-//       ctx.drawImage(
-//         canvas,
-//         0,
-//         position,
-//         canvas.width,
-//         croppedHeight,
-//         0,
-//         0,
-//         canvas.width,
-//         croppedHeight
-//       );
-
-//       const imgData = croppedCanvas.toDataURL('image/jpeg');
-
-//       if (position > 0) {
-//         pdf.addPage(); // Add new page if not the first
-//       }
-
-//       pdf.addImage(imgData, 'JPEG', margin, margin, imgWidth, (imgWidth / canvas.width) * croppedHeight);
-
-//       position += croppedHeight; // Move to next part of the content
-//     }
-
-//     pdf.save('document.pdf');
-//   });
-// }
-
-// downloadPdf()
-
-
-document.getElementById("download").addEventListener("click", function (event) {
-  event.preventDefault(); // Prevent form submission
-const { jsPDF } = window.jspdf;
-
-  const element = document.getElementById("pageContainer");
-  const pdf = new jsPDF("p", "mm", "a4"); // Initialize jsPDF for A4 size
-  const pageWidth = pdf.internal.pageSize.getWidth();
-  const pageHeight = pdf.internal.pageSize.getHeight();
-  const canvasScale = 2; // Scaling for better quality
-
-  // Use html2canvas to capture the content of the element
-  html2canvas(element, { scale: canvasScale }).then((canvas) => {
-    const imgData = canvas.toDataURL("image/png"); // Convert canvas to image
-    const imgWidth = pageWidth; // PDF page width
-    const imgHeight = (canvas.height * imgWidth) / canvas.width; // Maintain aspect ratio
-
-    let heightLeft = imgHeight; // Remaining height to render
-    let position = 0; // Position on the PDF page
-
-    // Render each page in the PDF
-    while (heightLeft > 0) {
-      pdf.addImage(imgData, "PNG", 0, position, imgWidth, imgHeight);
-
-      heightLeft -= pageHeight; // Reduce the height left
-      if (heightLeft > 0) {
-        position -= pageHeight; // Move position to next page
-        pdf.addPage(); // Add new page
-      }
-    }
-
-    // Save the PDF
-    pdf.save("credit_account_form.pdf");
-  });
-});
