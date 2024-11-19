@@ -205,13 +205,3 @@ label{
   border-width: 4px 0 0;
   background: none;
 }
-
-.page-break {
-    page-break-before: always; /* Forces a new page when printing */
-  }
-
-
-  #pageContainer {
-   /* A4 height in pixels at 96 DPI */
-    page-break-after: always; /* Force page breaks when printing */
-}
