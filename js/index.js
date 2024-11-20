@@ -107,7 +107,6 @@
 document.getElementById('download').addEventListener('click', async function () {
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF('p', 'mm', 'a4'); // إعداد PDF بحجم A4
-  const pageContainer = document.getElementById('pageContainer');
 
   // إعداد العرض والارتفاع الثابت
   const targetWidth = 1920; // عرض الدقة الثابتة المطلوبة
@@ -120,47 +119,56 @@ document.getElementById('download').addEventListener('click', async function () 
   const scaleHeight = targetHeight / actualHeight;
   const scaleFactor = Math.min(scaleWidth, scaleHeight); // اختيار أصغر قيمة لضمان التناسب
 
-  // إعداد html2canvas لالتقاط الصور
   const options = {
       scale: scaleFactor, // ضبط المقياس بناءً على العرض والارتفاع
       useCORS: true // السماح بالصور المضمنة
   };
 
-  // التقاط الصورة الكاملة للمحتوى
-  const canvas = await html2canvas(pageContainer, options);
-  const imgData = canvas.toDataURL('image/jpeg', 1.0); // استخراج الصورة بصيغة JPEG
+  // تحديد القسم الأول (قبل #sixthSectionTitle)
+  const pageContainer = document.getElementById('pageContainer');
+  const sixthSection = document.querySelector('#sixthSectionTitle');
+  const part1Clone = pageContainer.cloneNode(true);
+
+  // إزالة كل شيء بعد القسم المحدد في النسخة الأولى
+  let node = sixthSection;
+  while (node) {
+      const next = node.nextElementSibling;
+      if (next) next.remove();
+      node = next;
+  }
+
+  // التقاط القسم الأول
+  const canvas1 = await html2canvas(part1Clone, options);
+  const imgData1 = canvas1.toDataURL('image/jpeg', 1.0);
 
   const pageWidth = 210; // العرض الافتراضي للصفحة (مم)
   const pageHeight = 297; // الطول الافتراضي للصفحة (مم)
-  const imgWidth = pageWidth;
-  const imgHeight = (canvas.height * pageWidth) / canvas.width;
+  const imgWidth1 = pageWidth;
+  const imgHeight1 = (canvas1.height * imgWidth1) / canvas1.width;
 
-  // تقسيم الصورة يدويًا إلى قسمين بناءً على الارتفاع
-  const partHeight = imgHeight / 2; // تقسيم الصورة إلى نصفين
-  const canvas1 = document.createElement('canvas');
-  const canvas2 = document.createElement('canvas');
-  canvas1.width = canvas.width;
-  canvas1.height = canvas.height / 2;
-  canvas2.width = canvas.width;
-  canvas2.height = canvas.height / 2;
+  pdf.addImage(imgData1, 'JPEG', 0, 0, imgWidth1, imgHeight1);
 
-  const ctx1 = canvas1.getContext('2d');
-  const ctx2 = canvas2.getContext('2d');
+  // تحديد القسم الثاني (من #sixthSectionTitle فصاعدًا)
+  const part2Clone = pageContainer.cloneNode(true);
+  const part2 = part2Clone.querySelector('#sixthSectionTitle');
 
-  // نسخ الجزء الأول
-  ctx1.drawImage(canvas, 0, 0, canvas.width, canvas.height / 2, 0, 0, canvas.width, canvas.height / 2);
-  const imgData1 = canvas1.toDataURL('image/jpeg', 1.0);
+  // إزالة كل شيء قبل القسم المحدد في النسخة الثانية
+  let current = part2.previousElementSibling;
+  while (current) {
+      const prev = current.previousElementSibling;
+      if (current) current.remove();
+      current = prev;
+  }
 
-  // نسخ الجزء الثاني
-  ctx2.drawImage(canvas, 0, canvas.height / 2, canvas.width, canvas.height / 2, 0, 0, canvas.width, canvas.height / 2);
+  // التقاط القسم الثاني
+  const canvas2 = await html2canvas(part2Clone, options);
   const imgData2 = canvas2.toDataURL('image/jpeg', 1.0);
 
-  // إضافة الجزء الأول كصفحة PDF
-  pdf.addImage(imgData1, 'JPEG', 0, 0, pageWidth, pageHeight);
+  const imgWidth2 = pageWidth;
+  const imgHeight2 = (canvas2.height * imgWidth2) / canvas2.width;
 
-  // إضافة صفحة جديدة للجزء الثاني
   pdf.addPage();
-  pdf.addImage(imgData2, 'JPEG', 0, 0, pageWidth, pageHeight);
+  pdf.addImage(imgData2, 'JPEG', 0, 0, imgWidth2, imgHeight2);
 
   // حفظ ملف PDF
   pdf.save('form.pdf');
