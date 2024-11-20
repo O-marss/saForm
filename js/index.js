@@ -105,25 +105,32 @@
 
 
 document.getElementById('download').addEventListener('click', async function () {
-  setResolution(1920);
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF('p', 'mm', 'a4'); // A4 size
   const pageContainer = document.getElementById('pageContainer');
 
+  // إعداد دقة ثابتة
+  const targetWidth = 1920; // الدقة الثابتة التي تريد استخدامها
+  const actualWidth = window.innerWidth;
+  const scaleFactor = targetWidth / actualWidth; // مقياس الدقة
+
+  // إعداد html2canvas لالتقاط الصور
   const options = {
-      scale: 2, 
-      useCORS: true 
+      scale: scaleFactor, // زيادة جودة الصورة بناءً على الدقة المطلوبة
+      useCORS: true // للسماح بالصور المضمنة
   };
 
+  // الحصول على الصورة الكاملة للمحتوى
   const canvas = await html2canvas(pageContainer, options);
-  const imgData = canvas.toDataURL('image/jpeg', 1.0);
+  const imgData = canvas.toDataURL('image/jpeg', 1.0); // استخراج الصورة كبيانات
 
-  const pageWidth = 210;
-  const pageHeight = 297; 
+  const pageWidth = 210; // العرض الافتراضي للصفحة في PDF (مم)
+  const pageHeight = 297; // الطول الافتراضي للصفحة في PDF (مم)
   const imgWidth = pageWidth;
   const imgHeight = (canvas.height * pageWidth) / canvas.width;
 
-  const partHeight = imgHeight / 2; 
+  // تقسيم الصورة يدويًا إلى قسمين
+  const partHeight = imgHeight / 2; // نصف الصورة
   const canvas1 = document.createElement('canvas');
   const canvas2 = document.createElement('canvas');
   canvas1.width = canvas.width;
@@ -134,25 +141,21 @@ document.getElementById('download').addEventListener('click', async function () 
   const ctx1 = canvas1.getContext('2d');
   const ctx2 = canvas2.getContext('2d');
 
+  // نسخ الجزء الأول
   ctx1.drawImage(canvas, 0, 0, canvas.width, canvas.height / 2, 0, 0, canvas.width, canvas.height / 2);
   const imgData1 = canvas1.toDataURL('image/jpeg', 1.0);
 
+  // نسخ الجزء الثاني
   ctx2.drawImage(canvas, 0, canvas.height / 2, canvas.width, canvas.height / 2, 0, 0, canvas.width, canvas.height / 2);
   const imgData2 = canvas2.toDataURL('image/jpeg', 1.0);
 
+  // إضافة الجزء الأول كصفحة PDF
   pdf.addImage(imgData1, 'JPEG', 0, 0, pageWidth, pageHeight);
 
+  // إضافة صفحة جديدة للجزء الثاني
   pdf.addPage();
   pdf.addImage(imgData2, 'JPEG', 0, 0, pageWidth, pageHeight);
 
+  // حفظ ملف PDF
   pdf.save('form.pdf');
 });
-
-function setResolution(targetWidth) {
-  const actualWidth = window.innerWidth; // عرض الشاشة الحقيقي
-  const scale = actualWidth / targetWidth; // نسبة التحجيم المطلوبة
-  document.body.style.transform = `scale(${scale})`;
-  document.body.style.transformOrigin = "top left";
-  document.body.style.width = `${targetWidth}px`;
-}
-
