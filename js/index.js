@@ -109,14 +109,20 @@ document.getElementById('download').addEventListener('click', async function () 
   const pdf = new jsPDF('p', 'mm', 'a4'); // إعداد PDF بحجم A4
   const pageContainer = document.getElementById('pageContainer');
 
-  // إعداد ارتفاع ثابت
+  // إعداد العرض والارتفاع الثابت
+  const targetWidth = 1920; // عرض الدقة الثابتة المطلوبة
   const targetHeight = 1080; // ارتفاع الدقة الثابتة المطلوبة
+  const actualWidth = window.innerWidth; // عرض الشاشة الفعلي
   const actualHeight = window.innerHeight; // ارتفاع الشاشة الفعلي
-  const scaleFactor = targetHeight / actualHeight; // مقياس الدقة
+
+  // حساب مقياس العرض والارتفاع
+  const scaleWidth = targetWidth / actualWidth;
+  const scaleHeight = targetHeight / actualHeight;
+  const scaleFactor = Math.min(scaleWidth, scaleHeight); // اختيار أصغر قيمة لضمان التناسب
 
   // إعداد html2canvas لالتقاط الصور
   const options = {
-      scale: scaleFactor, // ضبط المقياس بناءً على ارتفاع الشاشة
+      scale: scaleFactor, // ضبط المقياس بناءً على العرض والارتفاع
       useCORS: true // السماح بالصور المضمنة
   };
 
