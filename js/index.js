@@ -106,31 +106,31 @@
 
 document.getElementById('download').addEventListener('click', async function () {
   const { jsPDF } = window.jspdf;
-  const pdf = new jsPDF('p', 'mm', 'a4'); // A4 size
+  const pdf = new jsPDF('p', 'mm', 'a4'); // إعداد PDF بحجم A4
   const pageContainer = document.getElementById('pageContainer');
 
-  // إعداد دقة ثابتة
-  const targetWidth = 1920; // الدقة الثابتة التي تريد استخدامها
-  const actualWidth = window.innerWidth;
-  const scaleFactor = targetWidth / actualWidth; // مقياس الدقة
+  // إعداد ارتفاع ثابت
+  const targetHeight = 1080; // ارتفاع الدقة الثابتة المطلوبة
+  const actualHeight = window.innerHeight; // ارتفاع الشاشة الفعلي
+  const scaleFactor = targetHeight / actualHeight; // مقياس الدقة
 
   // إعداد html2canvas لالتقاط الصور
   const options = {
-      scale: scaleFactor, // زيادة جودة الصورة بناءً على الدقة المطلوبة
-      useCORS: true // للسماح بالصور المضمنة
+      scale: scaleFactor, // ضبط المقياس بناءً على ارتفاع الشاشة
+      useCORS: true // السماح بالصور المضمنة
   };
 
-  // الحصول على الصورة الكاملة للمحتوى
+  // التقاط الصورة الكاملة للمحتوى
   const canvas = await html2canvas(pageContainer, options);
-  const imgData = canvas.toDataURL('image/jpeg', 1.0); // استخراج الصورة كبيانات
+  const imgData = canvas.toDataURL('image/jpeg', 1.0); // استخراج الصورة بصيغة JPEG
 
-  const pageWidth = 210; // العرض الافتراضي للصفحة في PDF (مم)
-  const pageHeight = 297; // الطول الافتراضي للصفحة في PDF (مم)
+  const pageWidth = 210; // العرض الافتراضي للصفحة (مم)
+  const pageHeight = 297; // الطول الافتراضي للصفحة (مم)
   const imgWidth = pageWidth;
   const imgHeight = (canvas.height * pageWidth) / canvas.width;
 
-  // تقسيم الصورة يدويًا إلى قسمين
-  const partHeight = imgHeight / 2; // نصف الصورة
+  // تقسيم الصورة يدويًا إلى قسمين بناءً على الارتفاع
+  const partHeight = imgHeight / 2; // تقسيم الصورة إلى نصفين
   const canvas1 = document.createElement('canvas');
   const canvas2 = document.createElement('canvas');
   canvas1.width = canvas.width;
