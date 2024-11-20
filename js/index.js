@@ -146,3 +146,13 @@ document.getElementById('download').addEventListener('click', async function () 
 
   pdf.save('form.pdf');
 });
+
+function setResolution(targetWidth) {
+  const actualWidth = window.innerWidth; // عرض الشاشة الحقيقي
+  const scale = actualWidth / targetWidth; // نسبة التحجيم المطلوبة
+  document.body.style.transform = `scale(${scale})`;
+  document.body.style.transformOrigin = "top left";
+  document.body.style.width = `${targetWidth}px`;
+}
+
+setResolution(1920);
