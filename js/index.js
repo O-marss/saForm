@@ -105,6 +105,7 @@
 
 
 document.getElementById('download').addEventListener('click', async function () {
+  setResolution(1920);
   const { jsPDF } = window.jspdf;
   const pdf = new jsPDF('p', 'mm', 'a4'); // A4 size
   const pageContainer = document.getElementById('pageContainer');
@@ -155,4 +156,3 @@ function setResolution(targetWidth) {
   document.body.style.width = `${targetWidth}px`;
 }
 
-setResolution(1920);
