@@ -3,20 +3,18 @@
   <head>
     <meta name="description" content="اتفاقية طلب فتح حساب ائتمان" />
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Zeina Form</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/print-js/1.6.0/print.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/html2canvas/1.4.1/html2canvas.min.js"></script>
     <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
     <link rel="stylesheet" href="css/all.min.css" />
     <link rel="stylesheet" href="css/style.css" />
     <link rel="stylesheet" href="media/media.css" />
+    <link rel="stylesheet" href="css/print.css" media="print" />
   </head>
   <body>
-    <div
-      id="pageContainer"
-      class="container border-1 border-black border overflow-x-hidden"
-    >
+    <div id="pageContainer" class="container border-1 border-black border">
       <header>
         <div class="container">
           <div class="logo d-flex justify-content-center align-items-center">
@@ -707,7 +705,7 @@
                 </div>
               </div>
             </div>
-
+            <div id="pageBreak"></div>
             <div class="col-12 section-title-container">
               <h2 class="h6 section-title" id="sixthSectionTitle">
                 المرفقات الرئيسية لقبول الطلب
@@ -879,7 +877,7 @@
               الشركة أو المؤسسة.
             </p>
 
-            <p>
+            <p id="authoizedContent">
               ويعتبر توقيعنا أو توقيع أي موظف من موظفينا المذكورين أدناه أو غير
               المذكورين على أوامر الشراء أو الفواتير أو كشوف الحساب بمثابة إقرار
               منا بالالتزام بسداد القيمة. وعليه، فقد فوضنا السادة المذكورة
@@ -1026,7 +1024,7 @@
           </form>
           <div class="row">
             <div class="col-12 section-title-container">
-              <h2 class="h6 section-title" id="seventhSectionTitle">
+              <h2 class="h6 section-title" id="eighthSectionTitle">
                 بنود الإتفاقية
               </h2>
             </div>
@@ -1136,7 +1134,12 @@
               </ul>
             </div>
 
-            <h3 class="h6 text-decoration-underline fw-bold">التعهد الشخصي</h3>
+            <h3
+              class="h6 text-decoration-underline fw-bold"
+              id="personalPledge"
+            >
+              التعهد الشخصي
+            </h3>
             <p>
               أتعهد بأنني أتحمل كامل المسؤولية وملتزم التزامًا كاملاً بسداد جميع
               المبالغ المترتبة علي من ذمتي الخاصة والتي تخص الديون المستحقة من
@@ -1180,12 +1183,18 @@
       </main>
     </div>
     <div class="text-center my-3 container">
-      <button form="myForm" type="submit" id="download">
+      <button
+        form="myForm"
+        type="submit"
+        id="download"
+        onclick="window.print()"
+      >
         <i class="fas fa-download"></i>
         Download Form
       </button>
     </div>
     <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="pdf-creation-javascript/generate-pdf.js"></script>
     <script src="js/index.js"></script>
   </body>
 </html>

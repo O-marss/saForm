@@ -1,0 +1,51 @@
+@media print {
+  body {
+    max-width: 1000px;
+  }
+
+  #pageContainer {
+    min-width: 720px;
+  }
+
+  .logo .logo-img {
+    width: 300px;
+  }
+
+  .main-header {
+    margin-top: 0.3125rem;
+    font-size: 1.4375rem;
+  }
+  .main-date {
+    font-size: 0.875rem;
+    margin: 10px 0 0 0;
+  }
+
+  #download {
+    display: none;
+  }
+
+  div {
+    width: 100%;
+  }
+
+  @page {
+    size: A4 portrait;
+    margin: 20px !important;
+  }
+
+  #secondSectionTitle {
+    page-break-before: always;
+  }
+
+  #fourthSectionTitle {
+    page-break-before: always;
+  }
+
+  #eighthSectionTitle {
+    page-break-before: always;
+  }
+
+  #authoizedContent {
+    page-break-before: always;
+  }
+}

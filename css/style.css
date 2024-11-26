@@ -1,6 +1,8 @@
 *{
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
+            -webkit-print-color-adjust: exact !important; 
+            print-color-adjust: exact !important;
 }
 
 body{
@@ -62,17 +64,17 @@ label{
 }
 
 
-#form-container form label{
+#myForm  label{
     font-size: 0.875rem;
     font-weight: 600;
     text-transform: capitalize;
 }
 
-#form-container form span{
+#myForm  span{
     color: #86b7fe;
 }
 
-#form-container form input.form-control.is-invalid, .was-validated .form-control:invalid{
+#myForm  input.form-control.is-invalid, .was-validated .form-control:invalid{
     border-color: #dc3545;
 }
 
@@ -87,7 +89,7 @@ label{
             box-shadow: 0 0 0 .25rem #4b437652;
 }
 
-#form-container form input .in
+#myForm  input .in
 .article-items{
     margin-bottom: 1.875rem;
 }
@@ -112,7 +114,7 @@ label{
     direction: ltr;
 }
 
-#form-container .terms li span{
+#myForm .terms li span{
     color: #2A3663;
     font-weight: bold;
 }
