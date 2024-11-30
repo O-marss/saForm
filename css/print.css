@@ -1,6 +1,13 @@
 @media print {
+
+
+body{
+  font-size: 13px !important;
+}
+
   #pageContainer {
     min-width: 720px;
+    margin-inline: auto;
   }
 
   .logo .logo-img {
@@ -24,20 +31,33 @@
     width: 100%;
   }
 
-  .chooseFile{
-    display: none;
+  .form-control{
+    font-size: 0.7rem;
   }
 
-  #companyEmailLabelContainer{
-    margin-bottom: 0 !important;
+  .file-form-label{
+    width: 300px;
   }
+
+ 
+
+
+  #signature,#stampText,#certificationText
+  {
+    font-size: 14px !important;
+  }
+
+  .certification,.stamp{
+    height: 80px; 
+}
+
 
   @page {
     size: A4 portrait;
     margin: 20px !important;
   }
 
-  #thirdSectionTitle {
+  #fourthSectionTitle {
     page-break-before: always;
   }
 
@@ -49,7 +69,7 @@
     page-break-before: always;
   }
 
-  #personalPledge {
+  /* #personalPledge {
     page-break-before: always;
-  }
+  } */
 }

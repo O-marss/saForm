@@ -8,6 +8,7 @@
 body{
     font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.5;  
+    font-size: 14px !important;
 }
 
 h1,
@@ -46,6 +47,14 @@ header h1{
     margin: 10px 0 0 0;
 }
 
+
+h2,
+h3,
+h4,
+h5,
+h6{
+    font-size: 14px !important;
+}
 
 label{
     width: -webkit-fit-content;
