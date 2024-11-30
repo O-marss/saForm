@@ -24,16 +24,24 @@
     width: 100%;
   }
 
+  .chooseFile{
+    display: none;
+  }
+
+  #companyEmailLabelContainer{
+    margin-bottom: 0 !important;
+  }
+
   @page {
     size: A4 portrait;
     margin: 20px !important;
   }
 
-  #secondSectionTitle {
+  #thirdSectionTitle {
     page-break-before: always;
   }
 
-  #fourthSectionTitle {
+  #seventhSectionTitle {
     page-break-before: always;
   }
 
@@ -41,7 +49,7 @@
     page-break-before: always;
   }
 
-  #authoizedContent {
+  #personalPledge {
     page-break-before: always;
   }
 }
