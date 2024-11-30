@@ -1,19 +1,21 @@
 @media print {
-
-
-body{
-  font-size: 13px !important;
-}
-
+  body{
+    font-size: 13px !important;
+  }
+  h2,
+  h3,
+  h4,
+  h5,
+  h6{
+    font-size: 14px !important;
+  }
   #pageContainer {
     min-width: 720px;
     margin-inline: auto;
   }
-
   .logo .logo-img {
     width: 300px;
   }
-
   .main-header {
     margin-top: 0.3125rem;
     font-size: 1.4375rem;
@@ -22,54 +24,44 @@ body{
     font-size: 0.875rem;
     margin: 10px 0 0 0;
   }
-
   #download {
     display: none;
   }
-
   div {
     width: 100%;
   }
-
   .form-control{
-    font-size: 0.7rem;
+    font-size: 13px;
   }
-
   .file-form-label{
     width: 300px;
   }
-
- 
-
-
   #signature,#stampText,#certificationText
   {
     font-size: 14px !important;
   }
-
   .certification,.stamp{
     height: 80px; 
-}
-
-
+  }
+  .form-control.is-valid, .was-validated .form-control:valid{
+    border-color: #4b4376 !important;
+    padding-right: 10px !important;
+    background-image: none;
+    background-repeat: none;
+    background-position: none;
+    background-size: none;
+  }
   @page {
     size: A4 portrait;
     margin: 20px !important;
   }
-
   #fourthSectionTitle {
     page-break-before: always;
   }
-
   #seventhSectionTitle {
     page-break-before: always;
   }
-
   #eighthSectionTitle {
     page-break-before: always;
   }
-
-  /* #personalPledge {
-    page-break-before: always;
-  } */
 }

@@ -1,14 +1,13 @@
-*{
-    -webkit-box-sizing: border-box;
-            box-sizing: border-box;
-            -webkit-print-color-adjust: exact !important; 
-            print-color-adjust: exact !important;
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-print-color-adjust: exact !important;
+  print-color-adjust: exact !important;
 }
 
-body{
-    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.5;  
-    font-size: 14px !important;
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.5;
 }
 
 h1,
@@ -17,144 +16,141 @@ h3,
 h4,
 h5,
 h6,
-.h6{
-    color: #2A3663;
+.h6 {
+  color: #2a3663;
 }
 
-
-header h1{
-    color: #2A3663;
-    text-align: center;
-    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+header h1 {
+  color: #2a3663;
+  text-align: center;
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
 }
 
-.logo{
-    position: relative;
-   
-} 
-
-.logo-img{ 
-    width: 300px;
+.logo {
+  position: relative;
 }
 
-.main-header{
-    margin-top: 0.3125rem;
-    font-size: 1.4375rem;
+.logo-img {
+  width: 300px;
 }
 
-.main-date{
-    font-size: 0.875rem;
-    margin: 10px 0 0 0;
+.main-header {
+  margin-top: 0.3125rem;
+  font-size: 1.4375rem;
 }
 
-
-h2,
-h3,
-h4,
-h5,
-h6{
-    font-size: 14px !important;
+.main-date {
+  font-size: 0.875rem;
+  margin: 10px 0 0 0;
 }
 
-label{
-    width: -webkit-fit-content;
-    width: -moz-fit-content;
-    width: fit-content;
+label {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
 
-.section-title{
-    background-color: #674188;
-    color: #fff;
-    padding: 0.3125rem 0.625rem 5px;
+.section-title {
+  background-color: #674188;
+  color: #fff;
+  padding: 0.3125rem 0.625rem 5px;
 }
 
-.section-title.h6{
-    color: #fff;
+.section-title.h6 {
+  color: #fff;
 }
 
-
-#myForm  label{
-    font-size: 0.875rem;
-    font-weight: 600;
-    text-transform: capitalize;
+#myForm label {
+  font-size: 0.875rem;
+  font-weight: 600;
+  text-transform: capitalize;
 }
 
-#myForm  span{
-    color: #86b7fe;
+#myForm span {
+  color: #86b7fe;
 }
 
-#myForm  input.form-control.is-invalid, .was-validated .form-control:invalid{
-    border-color: #dc3545;
+#myForm input.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  border-color: #dc3545;
 }
 
 .form-control {
-    background-color: #f1f1f1;
-    border-color: #4B4376;
+  background-color: #f1f1f1;
+  border-color: #4b4376;
 }
 
-.form-control:focus{
-    border-color: #4B4376;
-    -webkit-box-shadow: 0 0 0 .25rem #4b437652;
-            box-shadow: 0 0 0 .25rem #4b437652;
+.form-control:valid{
+    background-color: light-dark(rgb(232, 240, 254), rgba(70, 90, 126, 0.4)) !important;
 }
 
-#myForm  input .in
-.article-items{
-    margin-bottom: 1.875rem;
+.form-control:focus {
+  border-color: #4b4376;
+  -webkit-box-shadow: 0 0 0 0.25rem #4b437652;
+  box-shadow: 0 0 0 0.25rem #4b437652;
 }
 
-.article-items h3{
-    color: #1f3e6d;
-    text-decoration: underline;
+.file-form-label {
+  width: 300px;
 }
 
-.invalid-feedback{
-    background-color: rgba(220, 53, 69, 0.07);
-    padding: 0.3125rem;
+#myForm input .in .article-items {
+  margin-bottom: 1.875rem;
 }
 
-.form-check-input{
-    width: 1.5rem;
-    height: 1.5rem;
-    background-color: #f1f1f1;
+.article-items h3 {
+  color: #1f3e6d;
+  text-decoration: underline;
 }
 
-.chooseFile{
-    direction: ltr;
+.invalid-feedback {
+  background-color: rgba(220, 53, 69, 0.07);
+  padding: 0.3125rem;
 }
 
-#myForm .terms li span{
-    color: #2A3663;
-    font-weight: bold;
+.form-check-input {
+  width: 1.5rem;
+  height: 1.5rem;
+  background-color: #f1f1f1;
 }
 
-.certification{
-    height: 150px; 
-    border: 1px solid grey;
+.chooseFile {
+  direction: ltr;
 }
 
-.stamp{
-    height: 150px;
-    border: 1px solid grey;
+#myForm .terms li span {
+  color: #2a3663;
+  font-weight: bold;
+}
+
+.certification {
+  height: 150px;
+  border: 1px solid grey;
+}
+
+.stamp {
+  height: 150px;
+  border: 1px solid grey;
 }
 
 #download {
   -webkit-appearance: button;
-     -moz-appearance: button;
-          appearance: button;
-  background-color: #1899D6;
+  -moz-appearance: button;
+  appearance: button;
+  background-color: #1899d6;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
   -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  color: #FFFFFF;
+  box-sizing: border-box;
+  color: #ffffff;
   cursor: pointer;
   display: inline-block;
-  font-family: din-round,sans-serif;
+  font-family: din-round, sans-serif;
   font-size: 15px;
   font-weight: 700;
-  letter-spacing: .8px;
+  letter-spacing: 0.8px;
   line-height: 20px;
   margin: 0;
   outline: none;
@@ -163,17 +159,17 @@ label{
   text-align: center;
   text-transform: uppercase;
   -ms-touch-action: manipulation;
-      touch-action: manipulation;
+  touch-action: manipulation;
   -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-  -webkit-transition: -webkit-filter .2s;
-  transition: -webkit-filter .2s;
-  -o-transition: filter .2s;
-  transition: filter .2s;
-  transition: filter .2s, -webkit-filter .2s;
+  transform: translateZ(0);
+  -webkit-transition: -webkit-filter 0.2s;
+  transition: -webkit-filter 0.2s;
+  -o-transition: filter 0.2s;
+  transition: filter 0.2s;
+  transition: filter 0.2s, -webkit-filter 0.2s;
   -moz-user-select: none;
-   -ms-user-select: none;
-       user-select: none;
+  -ms-user-select: none;
+  user-select: none;
   -webkit-user-select: none;
   vertical-align: middle;
   white-space: nowrap;
@@ -182,7 +178,7 @@ label{
 
 #download:after {
   background-clip: padding-box;
-  background-color: #1CB0F6;
+  background-color: #1cb0f6;
   border: solid transparent;
   border-radius: 16px;
   border-width: 0 0 4px;
@@ -198,9 +194,9 @@ label{
 #download,
 #download:focus {
   -webkit-user-select: auto;
-     -moz-user-select: auto;
-      -ms-user-select: auto;
-          user-select: auto;
+  -moz-user-select: auto;
+  -ms-user-select: auto;
+  user-select: auto;
 }
 
 #download:hover:not(:disabled) {
@@ -216,4 +212,3 @@ label{
   border-width: 4px 0 0;
   background: none;
 }
-
